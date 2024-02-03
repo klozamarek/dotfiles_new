@@ -1,0 +1,48 @@
+#!/usr/bin/env zsh
+
+###############################
+# EXPORT ENVIRONMENT VARIABLE #
+###############################
+
+export TERM='xterm-kitty'
+export DOTFILES="$HOME/dotfiles"
+export WORKSPACE="$HOME/workspace"
+export TEMP="/tmp"
+
+# XDG
+export XDG_CONFIG_HOME="$HOME/.config"                  # for dotfiles
+export XDG_DATA_HOME="$XDG_CONFIG_HOME/local/share"     # for user specific data
+export XDG_CACHE_HOME="$XDG_CONFIG_HOME/cache"          # for user cached files
+
+# editor
+export EDITOR="nvim"
+export VISUAL="nvim"
+
+# zsh
+export ZDOTDIR="$XDG_CONFIG_HOME/zsh"                   
+export HISTFILE="$ZDOTDIR/.zhistory"                    # History filepath
+export HISTSIZE=10000                                   # Maximum events for internal history
+export SAVEHIST=10000                                   # Maximum events in history file
+
+# other software
+export TMUXP_CONFIGDIR="$XDG_CONFIG_HOME/tmuxp"
+export VIMCONFIG="$XDG_CONFIG_HOME/nvim"
+export SCREENSHOT="$HOME/Documents/images/screenshots"
+export NOTMUCH_CONFIG="$XDG_CONFIG_HOME/notmuch/.notmuch-config"
+
+# Man pages
+export MANPAGER='nvim +Man!'
+
+# fzf and ripgrep
+export FZF_DEFAULT_COMMAND="rg --files --hidden --glob '!.git'"
+export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
+
+# X11
+export XINITRC="$XDG_CONFIG_HOME/X11/xinitrc"
+
+# default browser
+export BROWSER="/usr/bin/brave"
+export WWW_HOME="https://duckduckgo.com/lite"
+
+# export path to ruby gems
+export PATH="/home/ssserpent/.config/local/share/gem/ruby/3.0.0/bin:$PATH"
