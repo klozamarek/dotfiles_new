@@ -1,0 +1,16 @@
+[database]
+path=/home/ssserpent/.config/local/share/mail
+hook_dir=/home/ssserpent/.config/local/share/mail/.notmuch/hooks
+[user]
+name=ssserpent
+primary_email=ssserpent@gmail.com
+other_email=kloza.marek@gmail.com
+[new]
+tags=new
+ignore=.mbsyncstate;.uidvalidity
+[search]
+exclude_tags=deleted;spam;
+[maildir]
+synchronize_flags=true
+[crypto]
+gpg_path=gpg

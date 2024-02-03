@@ -1,0 +1,28 @@
+# Example entries for NeoMutt mailcap file
+
+# # Text files
+# text/html; lynx -dump -force_html %s; copiousoutput
+# text/plain; less %s; copiousoutput
+
+# Images
+image/jpeg; sxiv %s; copiousoutput
+image/png; sxiv %s; copiousoutput
+
+# OpenOffice/LibreOffice documents
+application/msword; libreoffice --writer %s; copiousoutput
+application/vnd.openxmlformats-officedocument.wordprocessingml.document; libreoffice --writer %s; copiousoutput
+
+# Microsoft Excel files
+application/vnd.ms-excel; libreoffice --calc %s; copiousoutput
+application/vnd.openxmlformats-officedocument.spreadsheetml.sheet; libreoffice --calc %s; copiousoutput
+
+# Archive files
+application/zip; unzip -l %s; copiousoutput
+
+# Audio/Video files
+audio/*; mpv %s; copiousoutput
+video/*; mpv %s; copiousoutput
+
+# Generic binary files
+application/octet-stream; less %s; copiousoutput
+multipart/*; $DOTFILES/mutt/multipart.sh %s; copiousoutput

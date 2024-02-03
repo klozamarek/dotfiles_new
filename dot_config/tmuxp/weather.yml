@@ -1,0 +1,16 @@
+session_name: weather
+windows:
+  - window_name: ranger
+    layout: tiled
+    panes:
+      - ranger
+  - window_name: term
+    layout: tiled
+    panes:
+      -
+  - window_name: pogoda
+    layout: tiled
+    panes:
+      - focus: true
+        shell_command: 
+      - wttr

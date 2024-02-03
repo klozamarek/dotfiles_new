@@ -1,0 +1,17 @@
+# vim: filetype=neomuttrc
+source /usr/local/share/mutt-wizard/mutt-wizard.muttrc
+source /home/ssserpent/.config/mutt/accounts/ssserpent@gmail.com.muttrc
+macro index,pager i1 '<sync-mailbox><enter-command>source /home/ssserpent/.config/mutt/accounts/ssserpent@gmail.com.muttrc<enter><change-folder>!<enter>;<check-stats>' "switch to ssserpent@gmail.com"
+macro index,pager i2 '<sync-mailbox><enter-command>source /home/ssserpent/.config/mutt/accounts/kloza.marek@gmail.com.muttrc<enter><change-folder>!<enter>;<check-stats>' "switch to kloza.marek@gmail.com"
+
+# Sort by threads
+set sort = threads
+# Sort threads by last date recieved - newest first
+set sort_aux = reverse-last-date-received
+# Use nvim but don't force text width (looks terible if read on a phone)
+set editor = "nvim +':set textwidth=0'"
+
+# # gruvbox dark colorscheme
+# source $DOTFILES/mutt/gruvbox/colors-gruvbox-shuber.muttrc
+# # For neomutt uncomment this line:
+# source $DOTFILES/mutt/gruvbox/colors-gruvbox-shuber-extended.muttrc

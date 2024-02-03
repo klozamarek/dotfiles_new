@@ -1,0 +1,81 @@
+# General settings ----------------------------------------------------
+
+auto-reload yes
+cleanup-on-quit yes
+notify-always yes
+notify-format "newsboat: %n unread articles within %f unread feeds"
+notify-program notify-send
+refresh-on-startup yes
+reload-time 20
+show-keymap-hint yes 
+swap-title-and-hints false
+browser "/usr/bin/brave"
+external-url-viewer "/usr/bin/urlview"
+pager internal
+macro y set browser "mpv %u" ; open-in-browser ; set browser "brave %u"
+show-read-articles yes
+show-read-feeds no
+always-display-description true
+max-items 100
+keep-articles-days 7
+save-path ~/Downloads/newsboat
+articlelist-format "%4i %f %D %?T?;%-17T; ?%t"
+articlelist-title-format "Articles in feed %T (%u unread)"
+
+bind-key j next
+bind-key k prev
+bind-key J next-feed
+bind-key K prev-feed
+bind-key j down article
+bind-key k up article
+bind-key J next article
+bind-key K prev article
+bind-key l open
+bind-key h quit
+
+bind-key LEFT quit
+bind-key RIGHT open
+
+# hide articles matching: ---------------------------------------------
+
+ignore-article "*" "title =~ \"Sponsor\""
+ignore-article "*" "title =~ \"Advertisement\""
+ignore-mode "display"
+
+# Color scheme --------------------------------------------------------
+# This file was generated from <%= __FILE__ %> by ~/Makefile
+# # <% if ENV['THEME'] == 'dark' %>
+# # Colors from "gruvbox" colorscheme https://github.com/morhetz/gruvbox
+color article                              color223 color236
+color background                           color100 color236
+color info                                 color142 color235
+color listfocus                            color214 color239
+color listfocus_unread                     color214 color96
+color listnormal                           color246 color237
+color listnormal_unread                    color175 color237
+highlight article "^Feed:.*"               color175 color237
+highlight article "^Title:.*"              color214 color237 bold
+highlight article "^Author:.*"             color167 color237
+highlight article "^Link:.*"               color109 color237
+highlight article "^Date:.*"               color142 color237
+highlight article "\\[[0-9]\\+\\]"         color208 color237 bold
+highlight article "\\[[^0-9].*[0-9]\\+\\]" color167 color237 bold
+# <% else %>
+# # Colors from PaperColor https://github.com/NLKNguyen/papercolor-theme
+# color article                              color238 color255
+# color background                           color238 color255
+# color info                                 color255 color31
+# color listfocus                            color238 color254
+# color listfocus_unread                     color162 color254
+# color listnormal                           color238 color255
+# color listnormal_unread                    color162 color255
+# highlight article "^Feed:.*"               color162 color255
+# highlight article "^Title:.*"              color160 color255
+# highlight article "^Author:.*"             color166 color255
+# highlight article "^Link:.*"               color24 color255
+# highlight article "^Date:.*"               color28 color255
+# highlight article "\\[[0-9]\\+\\]"         color160 color255 bold
+# highlight article "\\[[^0-9].*[0-9]\\+\\]" color91 color255 bold
+# <% end %>
+
+# See also newsbeuter configuration https://gist.github.com/ivoarch/8256644

@@ -1,0 +1,15 @@
+session_name: ranger
+windows:
+  - window_name: ranger
+    layout: tiled
+    panes:
+      - ranger 
+  - window_name: terms
+    layout: even-horizontal
+    panes:
+      - focus: true 
+        shell_command: 
+          - cd $DOTFILES
+          - ls -lah
+      - shell_command:
+          - clear

@@ -1,0 +1,49 @@
+IMAPStore ssserpent@gmail.com-remote
+Host imap.gmail.com
+Port 993
+User ssserpent@gmail.com
+PassCmd "pass ssserpent@gmail.com"
+AuthMechs LOGIN
+SSLType IMAPS
+CertificateFile /etc/ssl/certs/ca-certificates.crt
+
+MaildirStore ssserpent@gmail.com-local
+Subfolders Verbatim
+Path /home/ssserpent/.config/local/share/mail/ssserpent@gmail.com/
+Inbox /home/ssserpent/.config/local/share/mail/ssserpent@gmail.com/INBOX
+
+Channel ssserpent@gmail.com
+Expunge Both
+Far :ssserpent@gmail.com-remote:
+Near :ssserpent@gmail.com-local:
+Patterns * !"*fts-flatcurve*" !"*virtual*"
+Create Both
+SyncState *
+MaxMessages 0
+ExpireUnread no
+# End profile
+
+IMAPStore kloza.marek@gmail.com-remote
+Host imap.gmail.com
+Port 993
+User kloza.marek@gmail.com
+PassCmd "pass kloza.marek@gmail.com"
+AuthMechs LOGIN
+SSLType IMAPS
+CertificateFile /etc/ssl/certs/ca-certificates.crt
+
+MaildirStore kloza.marek@gmail.com-local
+Subfolders Verbatim
+Path /home/ssserpent/.config/local/share/mail/kloza.marek@gmail.com/
+Inbox /home/ssserpent/.config/local/share/mail/kloza.marek@gmail.com/INBOX
+
+Channel kloza.marek@gmail.com
+Expunge Both
+Far :kloza.marek@gmail.com-remote:
+Near :kloza.marek@gmail.com-local:
+Patterns * !"*fts-flatcurve*" !"*virtual*"
+Create Both
+SyncState *
+MaxMessages 0
+ExpireUnread no
+# End profile

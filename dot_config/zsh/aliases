@@ -1,0 +1,175 @@
+#!/usr/bin/env bash
+
+# +--------+
+# | System |
+# +--------+
+
+alias shutdown='sudo shutdown now'
+alias restart='sudo reboot'
+
+# +-----+
+# | zsh |
+# +-----+
+
+alias d='dirs -v'
+for index ({1..9}) alias "$index"="cd +${index} > dev/null"; unset index #directory stack
+
+# +-----+
+# | ssh |
+# +-----+
+alias s='kitty +kitten ssh'
+
+# +----+
+# | ls |
+# +----+
+
+alias ls='ls --color=auto'
+alias nn='n -d -r -x -C -D -H -Q -P p'
+alias NN='sudo -E n -d -r -x -C -D -H -Q -P p'
+alias ll='ls -lahF'     # list long, w/hidden, hr, append file idn
+alias la='ls -alh'      # list long, w/hidden, hr
+alias llr='ls -lahR'    # list long, w/hidden, hr, recurs in subdirs
+alias lls='ls -lahFtr'  # list sorted by time, reversed
+alias lexa='exa --long --all --header --icons --git'
+alias texa='exa --long --tree --level=3'
+
+# +----+
+# | cp |
+# +----+
+
+alias cp='cp -iv'
+alias mv='mv -iv'
+alias rm='rm -iv'
+
+# +--------+
+# | pacman |
+# +--------+
+
+alias paci='sudo pacman -S'               # install
+alias pachi='sudo pacman -Ql'             # Pacman Has Installed - what files where installed in a package
+alias pacs='sudo pacman -Ss'              # search
+alias pacu='sudo pacman -Syu'             # update
+alias pacr='sudo pacman -R'               # remove package but not dependencies
+alias pacrr='sudo pacman -Rs'             # remove package with unused dependencies by other softwares
+alias pacrc='sudo pacman -Sc'             # remove pacman's cache
+alias pacro='pacman -Rns $(pacman -Qtdq)'
+alias pacrl='rm /var/lib/pacman/db.lck'   # pacman remove locks
+alias pacls="sudo pacman -Qe"
+alias pacc='sudo pacman -Sc'
+alias paccc='sudo pacman -Scc'            # empty the whole cache
+
+# +-----+
+# | yay |
+# +-----+
+
+alias yayi='yay -S'     # install
+alias yayhi='yay -Ql'   # Yay Has Installed - what files where installed in a package
+alias yays='yay -Ss'    # search
+alias yayu='yay -Syu'   # update
+alias yayr='yay -R'     # remove package but not dependencies
+alias yayrr='yay -Rs'   # remove package with unused dependencies by other softwares
+alias yayrc='yay -Sc'   # remove yay's cache
+alias yayls="yay -Qe"
+
+# +-----+
+# | git |
+# +-----+
+
+# Run any git command with a split diff, e.g. `DD gshs`. Think 'delta-double'
+alias DD="DELTA_FEATURES=+side-by-side"
+
+alias gs='git status'
+alias gss='git status -s'
+alias ga='git add'
+alias gc='git commit'
+alias gp='git push'
+alias gpo="git push origin"
+alias gpom="git push origin master"
+alias gl="git pull"
+alias glor="git pull origin"
+alias gd="git diff"
+alias gds="git diff --staged"
+alias gdd="DELTA_FEATURES=+side-by-side git diff" # Think 'double-diff'
+alias gdds="DELTA_FEATURES=+side-by-side git diff --staged" # 'double-diff'
+
+# +------+
+# | grep |
+# +______+
+
+alias grep='grep -P -i --color=auto' # grep w/ Perl regex, ignore case, add color
+
+# +------+
+# | tmux |
+# +------+
+
+alias tmuxk='tmux kill-session -t'
+alias tmuxa='tmux attach -t'
+alias tmuxl='tmux list-sessions'
+
+# +----+
+# | du |
+# +----+
+
+alias dud='du -sh * | sort -hr'
+
+# +----------------+
+# | tree colorized |
+# +----------------+
+
+alias tree='tree -C'
+
+# +------------+
+# | expressvpn |
+# +------------+
+ 
+alias vpns='expressvpn status'
+alias vpnc='expressvpn connect'
+alias vpnd='expressvpn disconnect'
+alias vpna='expressvpn activate'
+
+# +------+
+# | pass |
+# +------+
+
+alias pt='pass tessen -p'
+
+# +-------+
+# | h-m-m |
+# +-------+
+
+alias hm='h-m-m'
+
+# +-------+
+# | buku |
+# +------+
+
+alias b='buku --suggest'
+
+# +-------------+
+# | vim-notmuch |
+# +-------------+
+
+alias vnm='nvim -c ":NotMuch"'
+
+# +------------+
+# | oil-search |
+# +------------+
+
+alias os="oil-search"
+
+# +--------------+
+# | transmission |
+# +--------------+
+
+alias tsm="transmission-remote"
+# Folders
+alias work="$HOME/workspace"
+alias doc="$HOME/Documents"
+alias dow="$HOME/Downloads"
+alias dot="$HOME/.dotfiles"
+
+# +---------+
+# | surfraw |
+# +---------+
+alias sr='sr -browser=w3m'
+alias surfraw='surfraw -browser=brave'

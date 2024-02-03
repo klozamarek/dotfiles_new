@@ -1,0 +1,22 @@
+account ssserpent@gmail.com
+host smtp.gmail.com
+port 465
+from ssserpent@gmail.com
+user ssserpent@gmail.com
+passwordeval "pass ssserpent@gmail.com"
+auth on
+tls on
+tls_trust_file	/etc/ssl/certs/ca-certificates.crt
+logfile /home/ssserpent/.local/state/msmtp/msmtp.log
+tls_starttls off
+account kloza.marek@gmail.com
+host smtp.gmail.com
+port 465
+from kloza.marek@gmail.com
+user kloza.marek@gmail.com
+passwordeval "pass kloza.marek@gmail.com"
+auth on
+tls on
+tls_trust_file	/etc/ssl/certs/ca-certificates.crt
+logfile /home/ssserpent/.local/state/msmtp/msmtp.log
+tls_starttls off

@@ -1,0 +1,43 @@
+# This is the default filter chain
+[SpamFilter]
+[KillThreadsFilter]
+[ListMailsFilter]
+[ArchiveSentMailsFilter]
+[SentMailsFilter]
+sent_tag = sent
+[InboxFilter]
+
+[Filter.1]
+query = 'from:biuro.daxa@gmail.com OR from:daxa@op.pl OR from:daxonia@wp.pl'
+tags = +daxa
+message = daxa mail
+
+[Filter.2]
+query = 'subject:"sleep 1m && pass git pull"'
+tags = +deleted;-inbox
+message = purging CRON mails
+
+[Filter.3]
+query = 'from:*allegro.pl OR *allegromail.pl OR from:*allegrolokalnie.pl OR from:*olx.pl OR from:*aliexpress.com'
+tags = +shop;-inbox
+message = tagging shops
+
+[Filter.4]
+query = 'from:*google.com'
+tags = +google;-inbox
+message = tagging google
+
+[Filter.5]
+query = 'from:*mailing.lot.com OR from:*mailing.milesandmore.com'
+tags = +lot;-inbox
+message = tagging lot
+
+[Filter.6]
+query = 'from:*linkedin.com'
+tags = +linkedin;-inbox
+message = tagging linkedin
+
+[Filter.7]
+query = 'from:*bandcamp.com OR from:*mail.goodreads.com OR from:*netflix.com OR from:*audiocave.pl'
+tags = +fun;-inbox
+message = tagging entertainment

@@ -1,0 +1,27 @@
+session_name: ranger
+windows:
+  - window_name: ranger
+    layout: tiled
+    panes:
+      - ranger /run/media/ssserpent/gen_dta/Music/ /home/ssserpent/
+  - window_name: term
+    layout: tiled
+    panes:
+      - 
+  - window_name: cmus
+    layout: tiled
+    panes:
+      - cmus
+  - window_name: pogoda v1
+    layout: tiled
+    panes:
+      - wttr
+  - window_name: pogoda v2
+    layout: tiled
+    panes:
+      - wttr -v2
+  - window_name: moon
+    layout: tiled
+    panes:
+      - wttr -m
+
