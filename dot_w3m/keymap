@@ -1,0 +1,337 @@
+#__        _______ __  __   _  __                                
+#\ \      / /___ /|  \/  | | |/ /___ _   _ _ __ ___   __ _ _ __  
+# \ \ /\ / /  |_ \| |\/| | | ' // _ \ | | | '_ ` _ \ / _` | '_ \ 
+#  \ V  V /  ___) | |  | | | . \  __/ |_| | | | | | | (_| | |_) |
+#   \_/\_/  |____/|_|  |_| |_|\_\___|\__, |_| |_| |_|\__,_| .__/ 
+#                                    |___/                |_|    
+# @Marek Kloza version 1.0
+#
+# {{{ ####### Marks ##########
+# The most important
+keymap m    MARK
+keymap .    NEXT_MARK
+keymap ,    PREV_MARK
+# Mark all search terms
+keymap \"   REG_MARK
+# Mark URL-like strings as anchors
+keymap  :   NULL
+keymap ";"  MARK_URL
+# Mark current word as URL
+keymap M-";"  MARK_WORD
+keymap M-:  MARK_MID
+# }}}
+
+# {{{ ####### Vim Hotkeys ##########
+# references: http://d.hatena.ne.jp/eiiches/20100531/
+#             https://github.com/davidhalter/dotfiles/blob/master/.w3m/keymap
+# In-page Navigation
+# ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+# https://github.com/tats/w3m/blob/master/doc/README.func
+# Half Page Down / Up
+keymap  C-d     NEXT_HALF_PAGE
+keymap  C-u     PREV_HALF_PAGE
+# Scroll down one page (NEXT_PAGE) [Page Down]
+keymap  C-f     NEXT_PAGE
+keymap	SPC     NEXT_PAGE
+# Scroll up one page (PREV_PAGE) [Page Up]
+keymap  C-b     PREV_PAGE
+# Cursor right (MOVE_RIGHT)
+keymap  l       MOVE_RIGHT
+# Cursor left (MOVE_LEFT)
+keymap  h       MOVE_LEFT
+# Cursor down. With edge touched, slide (MOVE_DOWN1)
+keymap  DOWN    MOVE_DOWN1
+keymap  j       MOVE_DOWN1
+# Cursor up. With edge touched, slide (MOVE_UP1)
+keymap  k       MOVE_UP1
+keymap  UP      MOVE_UP1
+# Scroll the screen down one line (DOWN)
+keymap  C-e     DOWN
+# Scroll the screen up one line (UP)
+keymap  C-y     UP
+# Go to the beginning of the line (LINE_BEGIN)
+keymap  0       LINE_BEGIN
+# Go to the end of the line (LINE_END)
+keymap  $       LINE_END
+# Center on cursor column (CENTER_H)
+keymap  zh      CENTER_H
+# Center on cursor line (CENTER_V)
+keymap  zz      CENTER_V
+# Go to the specified line (GOTO_LINE)
+keymap  gg      GOTO_LINE
+# Go to the first line (BEGIN)
+keymap  gg      BEGIN
+# Go to the last line (END)
+keymap  G       END
+# Move to the next word (NEXT_WORD)
+keymap  w       NEXT_WORD
+# Move to the previous word (PREV_WORD)
+keymap  b       PREV_WORD
+# Move to the first hyperlink (LINK_BEGIN)
+keymap [    LINK_BEGIN
+# Move to the last hyperlink (LINK_END)
+keymap ]    LINK_END
+# Move to the next hyperlink (NEXT_LINK)
+keymap  TAB     NEXT_LINK
+keymap  C-n     NEXT_LINK
+# Move to the previous hyperlink (PREV_LINK)
+keymap  M-[Z    PREV_LINK
+keymap  C-p     PREV_LINK
+# Pop up menu to navigate between hyperlinks (MOVE_LIST_MENU)
+keymap  gf      MOVE_LIST_MENU
+# Undo last movement/jump across the page
+keymap (    UNDO
+# Redo the same
+keymap )    REDO
+# }}}
+
+# {{{ ####### Search ##########
+# Incremental search
+keymap C-r  ISEARCH_BACK
+keymap C-s  ISEARCH
+# Regular search
+keymap /    SEARCH
+keymap ?    SEARCH_BACK
+keymap N    SEARCH_PREV
+keymap n    SEARCH_NEXT
+# }}}
+
+# {{{ ####### Tab operations ###########
+keymap {        PREV_TAB
+keymap DEL      PREV_TAB
+keymap }        NEXT_TAB
+# Move tabs around
+keymap M-{      TAB_LEFT
+keymap M-}      TAB_RIGHT
+keymap C-q      CLOSE_TAB
+keymap C-w      CLOSE_TAB
+keymap C-t      NEW_TAB
+keymap M-t      TAB_MENU
+# }}}
+
+# {{{ ####### Links ##########
+# Open link in new tab
+keymap t    TAB_LINK
+keymap T    TAB_LINK
+keymap a    SAVE_LINK
+# Open current link in ext browser (application) defined in the config file
+keymap o    EXTERN_LINK
+# }}}
+
+# {{{ ####### Custom EXTERN/EXTERN_LINK commands ##########
+#copy current url and remove newline at the end.
+keymap xy   EXTERN '(printf "%s" | xsel -b)'
+#Copy link under cursor, It does not copy images urls
+keymap xf   EXTERN_LINK '(printf "%s" | xsel -b)'
+keymap xt   EXTERN_LINK 'transmission-remote --add'
+# yank url to multiple clipboard
+keymap yy   EXTERN_LINK "url=%s ; printf "%b" "$url" > /tmp/clipbrd.txt ; printf "%b" "$url" | xsel -b ; printf "%b" "$url" | tmux load-buffer -"
+keymap YY   EXTERN      "url=%s ; printf "%b" "$url" > /tmp/clipbrd.txt ; printf "%b" "$url" | xsel -b ; printf "%b" "$url" | tmux load-buffer -"
+# Display the link url
+keymap u    PEEK_LINK
+# menu of links
+keymap M-l  LIST_MENU
+# Another link list
+keymap L    LIST
+# }}}
+
+# {{{ ####### Buffer operations ##########
+# Previous buffer, close current
+keymap B    BACK
+# Navigate back without deleting current buffer
+keymap <    PREV
+keymap M-,  PREV
+# Navigate forward without deleting current buffer
+keymap >    NEXT
+keymap M-.  NEXT
+# Display current buffer URL
+keymap c    PEEK
+# Pop-up menu with open buffers
+keymap s    SELECT_MENU
+# Open current buffer in an external browser (app)
+keymap O    EXTERN
+# Open new URL
+keymap U    GOTO
+keymap M-u  GOTO_RELATIVE
+# Open local file
+keymap V    LOAD
+keymap :e   LOAD
+# edit buffer (the textual rendering, not the html source) in VIM (or editor)
+keymap M-e  EDIT_SCREEN
+# Edit source in VIM (or editor)
+keymap E    EDIT
+keymap |    PIPE_BUF
+# Save buffer
+keymap S    SAVE_SCREEN
+# Save html (source)
+keymap M-s  SAVE
+keymap :w   SAVE
+keymap C-l  REDRAW
+# Reload source URL
+keymap R    RELOAD
+# View source
+keymap v    VIEW
+# }}}
+
+# {{{ ####### Image operations ###########
+# See /usr/share/doc/w3m/README.img
+# Hover over image placeholder to view externally
+keymap I    VIEW_IMAGE
+keymap M-I  SAVE_IMAGE
+# Peek at image URL while hovered over placeholder
+keymap i    PEEK_IMG
+# }}}
+
+# {{{ ####### Misc ###########
+keymap gM   MAIN_MENU
+# Trigger input field submit action
+keymap C-c  SUBMIT
+# Current line #, total lines, cols, etc
+keymap C-g  LINE_INFO
+# Browsing history
+keymap C-h  HISTORY
+#keymap C-k COOKIE
+# Options page
+keymap C-o  OPTIONS
+# Reload config options
+keymap M-r  REINIT
+keymap M-o  SET_OPTION
+keymap C-z  SUSPEND
+keymap !    SHELL
+keymap #    PIPE_SHELL
+keymap @    READ_SHELL
+# page info, including the response HTTP header
+keymap M-+  INFO
+keymap D    DOWNLOAD_LIST
+# Toggle frames
+keymap F    FRAME
+# View the key mappings (with w3m descriptions), including the possible unassigned commands
+keymap H    HELP
+keymap M-m  MOUSE_TOGGLE
+keymap ZZ   QUIT
+keymap q    QUIT
+keymap Q    NULL
+keymap ZQ   EXIT
+keymap r    VERSION
+# Optionally configurable menu (~/.w3m/menu)
+keymap M    MENU
+keymap M-a ADD_BOOKMARK
+# Bookmark page
+keymap M-b BOOKMARK
+# Run internal command
+keymap :: COMMAND
+keymap M-c COMMAND
+keymap M-k DEFINE_KEY
+# Invoke the external dictionary with input word
+keymap M-w DICT_WORD
+# Invoke the dictionary with word under cursor
+keymap M-W DICT_WORD_AT
+keymap W WRAP_TOGGLE
+# }}}
+
+# {{{ ####### User-defined bindings ###########
+keymap  :b       SHELL "$EDITOR ~/.config/surfraw/bookmarks"
+keymap  :c       SHELL "$EDITOR ~/.w3m/config"
+keymap  :k       SHELL "$EDITOR ~/.w3m/keymap"
+keymap  :u       SHELL "$EDITOR ~/.w3m/urimethodmap"
+# }}}
+
+# {{{ ####### Scripts/cgi-bin ##########
+keymap pp GOTO file:/cgi-bin/goto_clipboard.cgi
+keymap PP TAB_GOTO file:/cgi-bin/goto_clipboard.cgi
+keymap pt GOTO file:/cgi-bin/goto_tmux_clipboard.cgi
+keymap PT TAB_GOTO file:/cgi-bin/goto_tmux_clipboard.cgi
+keymap pw GOTO file:/cgi-bin/goto_w3m_clipboard.cgi
+keymap PW TAB_GOTO file:/cgi-bin/goto_w3m_clipboard.cgi
+# }}}
+
+# {{{ ####### Macros ##########
+
+# strip out extra 'pre-content' on CMS-rich or wordpress sites with id="content" tag
+#keymap  M-7        COMMAND "VIEW; PIPE_BUF \"sed -n '1,/<body/p; /id=\\\"content\\\"/,$p'\" VIEW"
+
+# Thanks to gotbletu for revealing the possibility of 2+ stroke combinations
+#   https://github.com/gotbletu/shownotes/blob/master/w3m_macros.md
+
+# Proceed straight to these user-defined commands in the help page
+keymap M-?  COMMAND "HELP; SEARCH ^User-Defined; NEXT_PAGE; CENTER_V"
+keymap \\\? COMMAND "HELP; SEARCH ^User-Defined; NEXT_PAGE; CENTER_V"
+# Treat URL strings as links
+keymap \\\u COMMAND "SET_OPTION mark_all_pages=toggle ; RELOAD"
+# Hinting mode for links: proceed with <link number> + [
+keymap \\\h COMMAND "SET_OPTION display_link_number=toggle ; RESHAPE"
+# Hinting mode for lines: proceed with <line number> + g
+keymap \\\l COMMAND "SET_OPTION show_lnum=toggle ; RESHAPE"
+keymap \\\t COMMAND "SET_OPTION display_borders=toggle ; RESHAPE"
+keymap \\\i COMMAND "SET_OPTION display_image=toggle ; RELOAD"
+keymap \\\e COMMAND "SET_OPTION user_agent='' ; RELOAD"
+keymap \\\A COMMAND "SET_OPTION user_agent='Opera/9.80 (S60; SymbOS; Opera Mobi/SYB-1107071606; U; en) Presto/2.8.149 Version/11.10' ; RELOAD"
+# Open search engine, proceed to and select the search box
+keymap M-/ COMMAND  "GOTO https://duckduckgo.com/lite/; NEXT_LINK; GOTO_LINK"
+keymap \\\s COMMAND "GOTO https://duckduckgo.com/lite/; NEXT_LINK; GOTO_LINK"
+keymap \\\g COMMAND "GOTO https://google.com; GOTO_LINE 6; NEXT_LINK; GOTO_LINK"
+keymap \\\p GOTO http://wttr.in/Wieliczka?lang=pl&m
+# Pipe to an external table-to-csv converter, then edit the rendered buffer
+keymap \\\T COMMAND "VIEW; PIPE_BUF tabletocsv; EDIT_SCREEN"
+keymap \\\L COMMAND "PIPE_BUF linkgrabber; BACK; REDRAW"
+# Open add-bookmark dialogue, editing bookmark title
+keymap \\\b COMMAND "ADD_BOOKMARK; LINK_END; PREV_LINK; GOTO_LINK"
+# Pass the page through the readability (readability-cli) plugin
+#   reqs: https://aur.archlinux.org/readability-cli.git, nodejs > 12
+keymap \\\r COMMAND "READ_SHELL 'rdrview $W3M_URL -H 2> /dev/null 1> /tmp/readable.html' ; LOAD /tmp/readable.html ; DELETE_PREVBUF"
+# Dictionary Lookup
+# Execute dictionary command (see README.dict) (DICT_WORD)
+keymap  \\\d    COMMAND "SET_OPTION dictcommand=file:///cgi-bin/dictionary.cgi ; DICT_WORD"
+# Execute dictionary command for word at cursor (DICT_WORD_AT)
+keymap  \\\w    COMMAND "SET_OPTION dictcommand=file:///cgi-bin/dictionary.cgi ; DICT_WORD_AT"
+keymap  xx  COMMAND "READ_SHELL ~/.w3m/cgi-bin/fnx_fzfmiru.cgi ; BACK ; GOTO file:/cgi-bin/fnx_execute.cgi ; BACK"
+# search with surfraw (no clipboard required)
+keymap xs   COMMAND "READ_SHELL ~/.w3m/cgi-bin/fzf_surfraw.cgi ; BACK ; GOTO file:/cgi-bin/goto_w3m_clipboard.cgi"
+keymap XS   COMMAND "READ_SHELL ~/.w3m/cgi-bin/fzf_surfraw.cgi ; BACK ; TAB_GOTO file:/cgi-bin/goto_w3m_clipboard.cgi"
+# Omnibar search engines
+# user input keywords to search
+keymap  s1      COMMAND "SET_OPTION dictcommand=file:///cgi-bin/omnibar_1337x.cgi ; DICT_WORD"
+keymap  sa      COMMAND "SET_OPTION dictcommand=file:///cgi-bin/omnibar_aspell.cgi ; DICT_WORD"
+keymap  sb      COMMAND "SET_OPTION dictcommand=file:///cgi-bin/omnibar_bing.cgi ; DICT_WORD"
+keymap  sd      COMMAND "SET_OPTION dictcommand=file:///cgi-bin/omnibar_duckduckgo.cgi ; DICT_WORD"
+keymap  sg      COMMAND "SET_OPTION dictcommand=file:///cgi-bin/omnibar_google.cgi ; DICT_WORD"
+keymap  si      COMMAND "SET_OPTION dictcommand=file:///cgi-bin/omnibar_geminispace.cgi ; DICT_WORD"
+keymap  sn      COMMAND "SET_OPTION dictcommand=file:///cgi-bin/omnibar_nyaasi.cgi ; DICT_WORD"
+keymap  sp      COMMAND "SET_OPTION dictcommand=file:///cgi-bin/omnibar_piratebay.cgi ; DICT_WORD"
+keymap  sr      COMMAND "SET_OPTION dictcommand=file:///cgi-bin/omnibar_subreddit.cgi ; DICT_WORD"
+keymap  st      COMMAND "SET_OPTION dictcommand=file:///cgi-bin/omnibar_twitch.cgi ; DICT_WORD"
+keymap  su      COMMAND "SET_OPTION dictcommand=file:///cgi-bin/omnibar_yewtube.cgi ; DICT_WORD"
+keymap  sv      COMMAND "SET_OPTION dictcommand=file:///cgi-bin/omnibar_veronica2.cgi ; DICT_WORD"
+keymap  sw      COMMAND "SET_OPTION dictcommand=file:///cgi-bin/omnibar_wikipedia.cgi ; DICT_WORD"
+keymap  sx      COMMAND "SET_OPTION dictcommand=file:///cgi-bin/omnibar_xdcceu.cgi ; DICT_WORD"
+keymap  sy      COMMAND "SET_OPTION dictcommand=file:///cgi-bin/omnibar_yahoo.cgi ; DICT_WORD"
+# search current word under cursor
+keymap  s2      COMMAND "SET_OPTION dictcommand=file:///cgi-bin/omnibar_1337x.cgi ; DICT_WORD_AT"
+keymap  sA      COMMAND "SET_OPTION dictcommand=file:///cgi-bin/omnibar_aspell.cgi ; DICT_WORD_AT"
+keymap  sB      COMMAND "SET_OPTION dictcommand=file:///cgi-bin/omnibar_bing.cgi ; DICT_WORD_AT"
+keymap  sD      COMMAND "SET_OPTION dictcommand=file:///cgi-bin/omnibar_duckduckgo.cgi ; DICT_WORD_AT"
+keymap  sG      COMMAND "SET_OPTION dictcommand=file:///cgi-bin/omnibar_google.cgi ; DICT_WORD_AT"
+keymap  sI      COMMAND "SET_OPTION dictcommand=file:///cgi-bin/omnibar_geminispace.cgi ; DICT_WORD_AT"
+keymap  sN      COMMAND "SET_OPTION dictcommand=file:///cgi-bin/omnibar_nyaasi.cgi ; DICT_WORD_AT"
+keymap  sP      COMMAND "SET_OPTION dictcommand=file:///cgi-bin/omnibar_piratebay.cgi ; DICT_WORD_AT"
+keymap  sR      COMMAND "SET_OPTION dictcommand=file:///cgi-bin/omnibar_subreddit.cgi ; DICT_WORD_AT"
+keymap  sU      COMMAND "SET_OPTION dictcommand=file:///cgi-bin/omnibar_yewtube.cgi ; DICT_WORD_AT"
+keymap  sV      COMMAND "SET_OPTION dictcommand=file:///cgi-bin/omnibar_veronica2.cgi ; DICT_WORD_AT"
+keymap  sW      COMMAND "SET_OPTION dictcommand=file:///cgi-bin/omnibar_wikipedia.cgi ; DICT_WORD_AT"
+keymap  sX      COMMAND "SET_OPTION dictcommand=file:///cgi-bin/omnibar_xdcceu.cgi ; DICT_WORD_AT"
+keymap  sY      COMMAND "SET_OPTION dictcommand=file:///cgi-bin/omnibar_yahoo.cgi ; DICT_WORD_AT"
+keymap  sT      COMMAND "SET_OPTION dictcommand=file:///cgi-bin/omnibar_twitch.cgi ; DICT_WORD_AT"
+
+# }}}
+
+# {{{ ####### Mouse Ops ##########
+keymap M-[E     MENU
+keymap M-[L     MENU
+keymap M-[Z     PREV_LINK
+keymap M-[1~    BEGIN
+keymap M-[2~    MENU
+keymap M-[4~    END
+keymap M-[5~    PREV_PAGE
+keymap M-[6~    NEXT_PAGE
+keymap M-[28~   MENU
+# }}}
