@@ -112,10 +112,14 @@ interval=10
 color=#6c71c4
 
 [battery]
+# for lenovo laptop
+{{- if eq .chezmoi.hostname "lenovo" }}
 command=upower -i /org/freedesktop/UPower/devices/battery_BAT1 | grep percentage | awk '{print $2}'
+{{ end }}
+command=upower -i /org/freedesktop/UPower/devices/battery_BAT0 | grep percentage | awk '{print $2}'
 interval=30
-# LABEL=BAT
-LABEL=⚡
+LABEL=BAT
+# LABEL=⚡
 # BAT_NUMBER=1
 color=#cc241d
 
