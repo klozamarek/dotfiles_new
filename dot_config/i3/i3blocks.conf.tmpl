@@ -114,11 +114,11 @@ color=#6c71c4
 [battery]
 {{- if eq .chezmoi.hostname "lenovo" }}
 # for lenovo laptop
-command=upower -i /org/freedesktop/UPower/devices/battery_BAT1 | grep percentage | awk '{print $2}'
+command=upower -i /org/freedesktop/UPower/devices/battery_BAT0 | grep percentage | awk '{print $2}'
 {{ end }}
 {{- if eq .chezmoi.hostname "archlinux" }}
 # for samsung laptop
-command=upower -i /org/freedesktop/UPower/devices/battery_BAT0 | grep percentage | awk '{print $2}'
+command=upower -i /org/freedesktop/UPower/devices/battery_BAT1 | grep percentage | awk '{print $2}'
 {{ end }}
 interval=30
 LABEL=BAT
