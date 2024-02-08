@@ -67,7 +67,15 @@ color=#689d6a
 
 [ethernet]
 label=:
+{{- if eq .chezmoi.hostname "lenovo" }}
+command=echo "$(ip addr show enp3s0 | grep -oP '(?<=inet\s)\d+\.\d+\.\d+\.\d+')"
+{{- end}}
+{{- if eq .chezmoi.hostname "samsung" }}
 command=echo "$(ip addr show eno1 | grep -oP '(?<=inet\s)\d+\.\d+\.\d+\.\d+')"
+{{- end}}
+{{- if eq .chezmoi.hostname "texus" }}
+command=echo "$(ip addr show eno1 | grep -oP '(?<=inet\s)\d+\.\d+\.\d+\.\d+')"
+{{- end}}
 interval=1800
 color=#98971a
 
@@ -111,24 +119,10 @@ command=echo "$(uptime | awk -F'[a-z]:' '{printf "%.2f%\n", 100 * $2 / $(NF-2)}'
 interval=10
 color=#6c71c4
 
-[battery]
-{{- if eq .chezmoi.hostname "lenovo" }}
-# for lenovo laptop
-command=upower -i /org/freedesktop/UPower/devices/battery_BAT0 | grep percentage | awk '{print $2}'
-{{ end }}
-{{- if eq .chezmoi.hostname "archlinux" }}
-# for samsung laptop
-command=upower -i /org/freedesktop/UPower/devices/battery_BAT1 | grep percentage | awk '{print $2}'
-{{ end }}
+[battery2]
+command=$XDG_CONFIG_HOME/i3/scripts/battery2
+markup=pango
 interval=30
-LABEL=BAT
-# LABEL=⚡
-# BAT_NUMBER=1
-color=#cc241d
-
-# command=upower --dump | grep keyboard -A 7 | grep percentage | awk '{print "K2:" $2}'
-# interval=600
-# color=#cc241d
 
 [monitors]
 command=$XDG_CONFIG_HOME/i3/scripts/monitor_manager

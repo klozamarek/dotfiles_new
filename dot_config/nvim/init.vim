@@ -7,7 +7,8 @@ set wildmode=full
 set history=200
 set foldmethod=marker
 nnoremap <space> <nop>
-let g:mapleader = "\<space>"}}}
+let g:mapleader = "\<space>"
+"}}}
 " -- edit vimrc with f5 and source it with f6{{{
 nnoremap <silent> <leader><F5> :tabedit $MYVIMRC<CR>
 nnoremap <silent> <leader><F6> :source $MYVIMRC<CR>"}}}
@@ -277,7 +278,8 @@ nnoremap <leader>fs <cmd>lua require('telescope.builtin').git_status()<CR>"}}}
 " -- settings for bbye{{{
 nnoremap <leader>q :Bdelete<CR>"}}}
 " -- settings for winresizer{{{
-let g:winresizer_start_key = "<F2>"}}}
+let g:winresizer_start_key = "<F2>"
+"}}}
 " -- settings for nnn.nvim{{{
 nnoremap <leader>e :NnnExplorer<cr>
 let g:nnn#action = {
