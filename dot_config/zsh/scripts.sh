@@ -1,10 +1,8 @@
 #!/bin/zsh
-
 # +-----------------+
 # | file management |
 # +-----------------+
-
-# file rename to my specific format
+#-- file rename to my specific format{{{
 renf () {
 # Use fzf to choose the file to rename
 filename=$(find . -maxdepth 1 -type f -printf '%f\n' | fzf --preview 'echo {}' --prompt='Choose a file to rename: ')
@@ -56,8 +54,8 @@ mv "$filename" "$new_filename"
 
 echo "File renamed to $new_filename."
 }
-#--------------------------------------------
-# replace whitespaces with underscores and make lowercase all filenames in cwd
+#--------------------------------------------}}}
+#-- replace whitespaces with underscores and make lowercase all filenames in cwd{{{
 lowscore () {
 for file in *; do 
     mv "$file" "${file// /_}" >/dev/null 2>&1 
@@ -78,14 +76,14 @@ mailf() {
         echo "cannot send :( - please provide email adress"
     fi
 }
-#--------------------------------------------
-# Open pdf with Zathura
+#--------------------------------------------}}}
+#-- Open pdf with Zathura{{{
 fpdf() {
     result=$(find -type f -name '*.pdf' | fzf --bind "ctrl-r:reload(find -type f -name '*.pdf')" --preview "pdftotext {} - | less")
     [ -n "$result" ] && nohup zathura "$result" &> /dev/null & disown
 }
-#--------------------------------------------
-# Internal function to extract any file
+#--------------------------------------------}}}
+#-- Internal function to extract any file{{{
 _ex() {
     case $1 in
         *.tar.bz2)  tar xjf $1      ;;
@@ -103,8 +101,8 @@ _ex() {
         *)          echo "'$1' cannot be extracted" ;;
     esac
 }
-#--------------------------------------------
-# configure nnn cd on quit
+#--------------------------------------------}}}
+#-- configure nnn cd on quit{{{
 n ()
 {
     # Block nesting of nnn in subshells
@@ -135,19 +133,19 @@ n ()
         rm -f "$NNN_TMPFILE" > /dev/null
     }
 }
-
+#--------------------------------------------------}}}
 # +--------+
 # | backup |
 # +--------+
-
+# {{{
 backup() {
     "$HOME/.bash/scripts/backup/backup.sh" "-x" "$@" "$HOME/.bash/scripts/backup/dir.csv"
 }
-
+# }}}
 # +------+
 # | tmux |
 # +------+
-
+# {{{
 ftmuxp() {
     if [[ -n $TMUX ]]; then
         return
@@ -172,8 +170,8 @@ ftmuxp() {
         tmuxp load "$ID"
     fi
 }
-#--------------------------------------------
-# Run man pages in nvim
+#--------------------------------------------}}}
+#-- Run man pages in nvim{{{
 vman() {
     nvim -c "SuperMan $*"
 
@@ -181,13 +179,13 @@ vman() {
         echo "No manual entry for $*"
     fi
 }
-#--------------------------------------------
-# Run scratchpad 
+#--------------------------------------------}}}
+#-- Run scratchpad {{{
 scratchpad() {
     "$DOTFILES/zsh/scratchpad.sh"
 }
-#--------------------------------------------
-# Run script preventing shell run ranger run shell
+#--------------------------------------------}}}
+#-- Run script preventing shell run ranger run shell{{{
 ranger() {
     if [ -z "$RANGER_LEVEL" ]; then
         /usr/bin/ranger "$@"
@@ -195,22 +193,21 @@ ranger() {
         exit
     fi
 }
-
+# }}}
 # +----------------+
 # | sys management |
 # +----------------+
-
-# Run script to update Arch and others
+#-- Run script to update Arch and others{{{
 updatesys() {
     sh $HOME/update.sh
 }
-#--------------------------------------------
-# history statistics
+#--------------------------------------------}}}
+#-- history statistics{{{
 historystat() {
     history 0 | awk '{ if ($2 == "sudo") {print $3} else {print $2} }' | awk -v "FS=|" '{print $1}' | sort | uniq -c | sort -r -n | head -15
 }
-#--------------------------------------------
-# check if the package is installed
+#--------------------------------------------}}}
+#-- check if the package is installed{{{
 # usage `_isInstalled "package_name"`
 # output 1 not installed; 0 already installed
 _isInstalled() {
@@ -223,8 +220,8 @@ _isInstalled() {
     echo "NOT installed"; #'1' means 'false' in zsh
     return; #false
 }
-#--------------------------------------------
-# `_install <pkg>`
+#--------------------------------------------}}}
+#-- install <pkg>{{{
 _install() {
     package="$1";
 
@@ -239,8 +236,8 @@ _install() {
         sudo pacman -S "${package}";
     fi;
 }
-#--------------------------------------------
-# `_installMany <pkg1> <pkg2> ...`
+#--------------------------------------------}}}
+#-- installMany <pkg1> <pkg2> ...{{{
 # Works the same as `_install` above,
 # but you can pass more than one package to this one.
 _installMany() {
@@ -269,48 +266,48 @@ _installMany() {
     printf "Packages not installed:\n%s\n" "${toInstall[@]}";
     sudo pacman -S "${toInstall[@]}";
 }
-#--------------------------------------------
-# list all user installed software with description
+#--------------------------------------------}}}
+#-- list all user installed software with description{{{
 
 list_apps() {
 
     for line in "$(pacman -Qqe)"; do pacman -Qi $(echo "$line") ; done | perl -pe 's/ +/ /gm' | perl -pe 's/^(Groups +: )(.*)/$1($2)/gm' | perl -0777 -pe 's/^Name : (.*)\nVersion :(.*)\nDescription : ((?!None).*)?(?:.|\n)*?Groups :((?! \(None\)$)( )?.*)?(?:.|\n(?!Name))+/$1$2$4\n    $3/gm' | grep -A1 --color -P "^[^\s]+"
 }
-
+# }}}
 # +-------+
 # | music |
 # +-------+
-
-# Run function to convert .ape -> .flac
+#-- Run function to convert .ape -> .flac{{{
 # function to convert .ape file to .flac file
 # run from the relevant directory
 ape2flac() {
 find . -name "*.ape" -exec sh -c 'exec ffmpeg -i "$1" "${1%.ape}.flac"' _ {} \;
 }
-#--------------------------------------------
-# Run function to split flac files from cue sheet
+#--------------------------------------------}}}
+#-- Run function to split flac files from cue sheet{{{
 # function to split individual flac files from cue sheet
 # output is <nr>-<SongName>
 # run from relevant directory
 cue2flac() {
 find . -name "*.cue" -exec sh -c 'exec shnsplit -f "$1" -o flac -t "%n-%t" "${1%.cue}.flac"' _ {} \;
 }
-#--------------------------------------------
-# Run function to tag flac files from cue sheet
+#--------------------------------------------}}}
+#-- Run function to tag flac files from cue sheet{{{
 # function to tag flac files from cue sheet
 # remove the unsplit flac file FIRST!
 tag2flac() {
     echo "please remove the unsplit (large) .flac file FIRST!!"
     find . -name "*.cue" -execdir sh -c 'exec cuetag.sh "$1" *.flac' _ {} \;
 } 
-#--------------------------------------------
-# Run function to convert .wav -> flac
+#--------------------------------------------}}}
+#-- Run function to convert .wav -> flac{{{
 # run from relevant directory
 wav2flac() {
       find . -name "*.wav" -exec sh -c 'exec ffmpeg -i "$1" "${1%.wav}.flac"' _ {} \;
 }
-#--------------------------------------------
-# zsh completion
+#--------------------------------------------}}}
+
+#-- zsh completion{{{
 # Display all autocompleted command in zsh.
 # First column: command name Second column: completion function
 zshcomp() {
@@ -319,8 +316,8 @@ zshcomp() {
         printf "%-32s %s\n" $command $completion
     done | sort
 }
-#--------------------------------------------
-# ripgrep-all and fzf intergation as per t.ly/fCsVn
+#--------------------------------------------}}}
+#-- ripgrep-all and fzf intergation as per t.ly/fCsVn{{{
 rga-fzf() {
 	RG_PREFIX="rga --files-with-matches"
 	local file
@@ -334,8 +331,8 @@ rga-fzf() {
 	echo "opening $file" &&
 	xdg-open "$file"
 }
-#--------------------------------------------
-# Find in File using ripgrep
+#--------------------------------------------}}}
+#-- Find in File using ripgrep{{{
 fif() {
   if [ ! "$#" -gt 0 ]; then return 1; fi
   rg --files-with-matches --no-messages "$1" \
@@ -343,8 +340,8 @@ fif() {
       | rg --colors 'match:bg:yellow' --ignore-case --pretty --context 10 '$1' \
       || rg --ignore-case --pretty --context 10 '$1' {}"
 }
-#--------------------------------------------
-# Find in file using ripgrep-all
+#--------------------------------------------}}}
+#-- Find in file using ripgrep-all{{{
 fifa() {
     if [ ! "$#" -gt 0 ]; then return 1; fi
     local file
@@ -352,8 +349,8 @@ fifa() {
         | fzf-tmux -p +m --preview="rga --ignore-case --pretty --context 10 '"$*"' {}")" \
         && print -z "./$file" || return 1;
 }
-#--------------------------------------------
-# to show in nnn mime-type of files (nnn related)
+#--------------------------------------------}}}
+#-- to show in nnn mime-type of files (nnn related){{{
 # posible types: audio, video, image, text, application, font
 # for full list google "common mime types"
 # to show video files, run: list video
@@ -362,12 +359,11 @@ list ()
     find . -maxdepth 1 | file -if- | grep "$1" | awk -F: '{printf "%s\0", $1}' | nnn
     # fd -d 1 | file -if- | grep "$1" | awk -F: '{printf "%s\0", $1}' | nnn
 }
-
+# }}}
 # +---------+
 # | imaging |
 # +---------+
-
-# Take a screenshot
+#-- Take a screenshot{{{
 screenshot () {
     local DIR="$SCREENSHOT"
     local DATE="$(date +%Y%m%d-%H%M%S)"
@@ -394,8 +390,9 @@ screenshot () {
         echo "No screenshot area has been specified. Please choose between: win, scr, area. Screenshot not taken."
     fi
 }
+# }}}
 
-# notetaking function 
+#-- notetaking function {{{
 # usage : an <filename> "text"
 # when prompted choose tags separated by spaces and hit ENTER
 # if you choose to create new tag enter new tag_name
@@ -465,3 +462,4 @@ an() {
   # create the file if it does not exist and append the note to the file on the ssh server
   ssh ssserpent@antix "touch \"$HOME/Documents/$filename\" && echo \"$note\" >> \"$HOME/Documents/$filename\""
 }
+#---------------------------------------------------------------}}}
