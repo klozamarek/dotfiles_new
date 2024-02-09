@@ -36,4 +36,4 @@
  ["Repos/ytfzf"]
     type = "git-repo"
     url = "https://github.com/pystardust/ytfzf.git"
-    refreshPeriod = "168h"   refreshPeriod = "168h"
+    refreshPeriod = "168h"
