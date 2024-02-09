@@ -71,7 +71,7 @@ label=:
 command=echo "$(ip addr show enp3s0 | grep -oP '(?<=inet\s)\d+\.\d+\.\d+\.\d+')"
 {{- end}}
 {{- if eq .chezmoi.hostname "samsung" }}
-command=echo "$(ip addr show eno1 | grep -oP '(?<=inet\s)\d+\.\d+\.\d+\.\d+')"
+command=echo "$(ip addr show enp4s0 | grep -oP '(?<=inet\s)\d+\.\d+\.\d+\.\d+')"
 {{- end}}
 {{- if eq .chezmoi.hostname "texus" }}
 command=echo "$(ip addr show eno1 | grep -oP '(?<=inet\s)\d+\.\d+\.\d+\.\d+')"
