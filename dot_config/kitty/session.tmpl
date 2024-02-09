@@ -1,6 +1,28 @@
 layout splits
 launch zsh
 cd ~
+{{- if eq .chezmoi.hostname "lenovo" }}
+enabled_layouts splits
+new_tab ranger
+launch ranger
+enabled_layouts splits
+new_tab mail
+launch neomutt
+enabled_layouts splits
+new_tab web
+launch w3m
+enabled_layouts splits
+new_tab chat
+launch nchat
+enabled_layouts splits
+new_tab irc
+launch weechat
+enabled_layouts splits
+new_tab rss
+launch newsboat
+enabled_layouts splits
+{{- end}}
+{{- if eq .chezmoi.hostname "samsung" }}
 enabled_layouts splits
 new_tab ranger
 launch ranger
@@ -23,8 +45,33 @@ enabled_layouts splits
 new_tab rss
 launch newsboat
 enabled_layouts splits
+{{- end}}
+{{- if eq .chezmoi.hostname "texus" }}
+enabled_layouts splits
+new_tab ranger
+launch ranger
+enabled_layouts splits
+new_tab mail
+launch neomutt
+enabled_layouts splits
+new_tab cmus
+launch cmus
+enabled_layouts splits
+new_tab web
+launch w3m
+enabled_layouts splits
+new_tab chat
+launch nchat
+enabled_layouts splits
+new_tab irc
+launch weechat
+enabled_layouts splits
+new_tab rss
+launch newsboat
+enabled_layouts splits
+{{- end}}
 
-# {{{ ###--- sample session file ---###
+# ###--- sample session file ---###
 # # Set the layout for the current tab
 # layout tall
 # # Set the working directory for windows in the current tab
@@ -64,4 +111,3 @@ enabled_layouts splits
 # # Make the current OS Window the globally active window (not supported on Wayland)
 # focus_os_window
 # launch emacs
-# }}}
