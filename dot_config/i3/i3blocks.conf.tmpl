@@ -60,7 +60,9 @@ interval=7200
 color=#fb4934
 
 [wifi]
-command=echo "$(nmcli -t -f active,ssid,signal dev wifi | grep yes | cut -d: -f2,3) $(ip -4 -o addr show wlan0 | awk '{print $4}' | cut -d/ -f1)" 
+{{- if eq .chezmoi.hostname "lenovo" }}
+command=echo "$(nmcli -t -f active,ssid,signal dev wifi | grep yes | cut -d: -f2,3) $(ip -4 -o addr show wlp2s0b1 | awk '{print $4}' | cut -d/ -f1)" 
+{{- end}}
 label=
 interval=10
 color=#689d6a

@@ -1,6 +1,0 @@
-
-[Default Applications]
-application/pdf=org.pwmt.zathura.desktop
-application/vnd.ms-excel=libreoffice-calc.desktop
-application/msword=libreoffice-writer.desktop
-application/vnd.openxmlformats-officedocument.wordprocessingml.document=libreoffice-writer.desktop

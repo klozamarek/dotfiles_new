@@ -33,4 +33,7 @@
 ["Repos/h-m-m"]
     type = "git-repo"
     url = "https://github.com/nadrad/h-m-m.git"
-    refreshPeriod = "168h"
+ ["Repos/ytfzf"]
+    type = "git-repo"
+    url = "https://github.com/pystardust/ytfzf.git"
+    refreshPeriod = "168h"   refreshPeriod = "168h"
