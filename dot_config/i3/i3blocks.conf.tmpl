@@ -59,27 +59,41 @@ command=echo "$(updates=$(checkupdates 2>/dev/null | wc -l); echo "$updates")"
 interval=7200
 color=#fb4934
 
-[wifi]
 {{- if eq .chezmoi.hostname "lenovo" }}
+[wifi]
 command=echo "$(nmcli -t -f active,ssid,signal dev wifi | grep yes | cut -d: -f2,3) $(ip -4 -o addr show wlp2s0b1 | awk '{print $4}' | cut -d/ -f1)" 
-{{- end}}
 label=
 interval=10
 color=#689d6a
 
 [ethernet]
 label=:
-{{- if eq .chezmoi.hostname "lenovo" }}
 command=echo "$(ip addr show enp3s0 | grep -oP '(?<=inet\s)\d+\.\d+\.\d+\.\d+')"
-{{- end}}
-{{- if eq .chezmoi.hostname "samsung" }}
-command=echo "$(ip addr show enp4s0 | grep -oP '(?<=inet\s)\d+\.\d+\.\d+\.\d+')"
-{{- end}}
-{{- if eq .chezmoi.hostname "texus" }}
-command=echo "$(ip addr show eno1 | grep -oP '(?<=inet\s)\d+\.\d+\.\d+\.\d+')"
-{{- end}}
 interval=1800
 color=#98971a
+{{- end}}
+
+{{- if eq .chezmoi.hostname "samsung" }}
+[wifi]
+command=echo "$(nmcli -t -f active,ssid,signal dev wifi | grep yes | cut -d: -f2,3) $(ip -4 -o addr show wlp2s0 | awk '{print $4}' | cut -d/ -f1)" 
+label=
+interval=10
+color=#689d6a
+
+[ethernet]
+label=:
+command=echo "$(ip addr show enp4s0 | grep -oP '(?<=inet\s)\d+\.\d+\.\d+\.\d+')"
+interval=1800
+color=#98971a
+{{- end}}
+
+{{- if eq .chezmoi.hostname "texus" }}
+[ethernet]
+label=:
+command=echo "$(ip addr show eno1 | grep -oP '(?<=inet\s)\d+\.\d+\.\d+\.\d+')"
+interval=1800
+color=#98971a
+{{- end}}
 
 [memory]
 command=$XDG_CONFIG_HOME/i3/scripts/memory
