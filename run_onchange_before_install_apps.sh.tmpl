@@ -6,10 +6,11 @@ sudo pacman --noconfirm --needed -S dialog
 apps_path="/tmp/apps.csv"
 
 #-- put list of apps in temporary file
-cat apps.csv > $apps_path
+# apps.csv hash: {{ include "apps.csv" | sha256sum }}
+cat apps.csv > $apps_path / < {{ joinPath .chezmoi.sourceDir "apps.csv" | quote }}
 
 dialog --title "Welcome!" \
---msgbox "Welcome to the install script for your apps and dotfiles!" \
+--msgbox "Welcome to the install script for your apps!" \
     10 60
 
 # Allow the user to select the group of packages he (or she) wants to install.
