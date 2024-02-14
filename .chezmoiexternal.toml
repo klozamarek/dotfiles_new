@@ -22,7 +22,7 @@
     type = "git-repo"
     url = "https://github.com/maximtrp/ranger-cmus.git"
     refreshPeriod = "168h"
-[".config/ranger/plugins/ranger-devicons2"]
+[".config/ranger/plugins/ranger-devicons"]
     type = "git-repo"
     url = "https://github.com/alexanderjeurissen/ranger_devicons.git"
     refreshPeriod = "168h"
