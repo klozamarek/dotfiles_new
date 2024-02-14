@@ -13,6 +13,7 @@ essential,dosfstools,DOS filesystem utilities
 essential,bat,Cat clone with syntax highlighting and git integration
 essential,atuin,Magical shell history
 essential,chezmoi,Manage your dotfiles across multiple machines
+essential,cowsay,useless therefore important!
 network,networkmanager,Network manager
 network,wget,a simple script that checks the weather condition via http://wttr.in
 network,speedtest-cli,Command line interface for testing internet bandwidth using speedtest.net
