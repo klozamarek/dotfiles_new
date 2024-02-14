@@ -37,11 +37,11 @@
     type = "git-repo"
     url = "https://github.com/pystardust/ytfzf.git"
     refreshPeriod = "168h"
- ["."]
+ [""]
     type = "file"
     url = "https://raw.githubusercontent.com/klozamarek/apps_installer/main/apps.csv"
     refreshPeriod = "168h"
- ["."]
+ [""]
     type = "file"
     url = "https://raw.githubusercontent.com/klozamarek/apps_installer/main/run_onchange_after_install_apps.sh.tmpl"
     refreshPeriod = "168h"
