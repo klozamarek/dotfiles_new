@@ -1,0 +1,107 @@
+#!/bin/bash
+
+#-- get dialog application
+sudo pacman --noconfirm --needed -S dialog
+#-- set variables
+apps_path="/tmp/apps.csv"
+
+#-- put list of apps in temporary file
+cat apps.csv > $apps_path
+
+dialog --title "Welcome!" \
+--msgbox "Welcome to the install script for your apps and dotfiles!" \
+    10 60
+
+# Allow the user to select the group of packages he (or she) wants to install.
+apps=("essential" "Essentials" on
+      "network" "Network" on
+      "tools" "Nice tools to have (highly recommended)" on
+      "compression" "Compression" on
+      "password" "Passwords management with pass" on
+      "tmux" "Tmux" on
+      "notifier" "Notification tools" on
+      "file_mngr" "File management" on
+      "git" "Git & git tools" on
+      "i3" "i3 wm" on
+      "zsh" "The Z-Shell (zsh)" on
+      "neovim" "Neovim" on
+      "urxvt" "URxvt" on
+      "web" "Browsers and mail" off
+      "js" "JavaScript tooling" off
+      "python" "Python installers support" off
+      "php" "PHP Scripting language" off
+      "multimedia" "Multimedia tools" off
+      "utilities" "Utilities" off
+      "office" "Office apps" off)
+
+dialog --checklist \
+"You can now choose what group of application you want to install. \n\n\
+You can select an option with SPACE and valid your choices with ENTER." \
+0 0 0 \
+"${apps[@]}" 2> app_choices
+choices=$(cat app_choices) && rm app_choices
+
+# Create a regex to only select the packages we want
+selection="^$(echo $choices | sed -e 's/ /,|^/g'),"
+lines=$(grep -E "$selection" "$apps_path")
+count=$(echo "$lines" | wc -l)
+packages=$(echo "$lines" | awk -F, {'print $2'})
+
+echo "$selection" "$lines" "$count" >> "/tmp/packages"
+sudo pacman -Syu --noconfirm
+
+rm -f /tmp/aur_queue
+
+dialog --title "Let's go!" --msgbox \
+"The system will now install everything you need.\n\n\
+It will take some time.\n\n " \
+13 60
+
+c=0
+echo "$packages" | while read -r line; do
+    c=$(( "$c" + 1 ))
+
+    dialog --title "Arch Linux Installation" --infobox \
+    "Downloading and installing program $c out of $count: $line..." \
+    8 70
+
+    ((sudo pacman --noconfirm --needed -S "$line" > /tmp/arch_install 2>&1) \
+    || echo "$line" >> /tmp/aur_queue) \
+    || echo "$line" >> /tmp/arch_install_failed
+
+done
+
+# Function able to install any package from the AUR (needs the package names as arguments).
+aur_install() {
+    curl -O "https://aur.archlinux.org/cgit/aur.git/snapshot/$1.tar.gz" \
+    && tar -xvf "$1.tar.gz" \
+    && cd "$1" \
+    && makepkg --noconfirm -si \
+    && cd - \
+    && rm -rf "$1" "$1.tar.gz"
+}
+
+aur_check() {
+    qm=$(pacman -Qm | awk '{print $1}')
+    for arg in "$@"
+    do
+        if [[ "$qm" != *"$arg"* ]]; then
+            yay --noconfirm --needed -S "$arg" &>> /tmp/aur_install \
+                || aur_install "$arg" &>> /tmp/aur_install
+        fi
+    done
+}
+
+cd /tmp
+
+count=$(wc -l < /tmp/aur_queue)
+c=0
+
+cat /tmp/aur_queue | while read -r line
+do
+    c=$(( "$c" + 1 ))
+    dialog --infobox \
+    "AUR install - Downloading and installing program $c out of $count: $line..." \
+    10 60
+    aur_check "$line"
+done
