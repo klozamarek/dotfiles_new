@@ -1,6 +1,0 @@
-0000000000000000000000000000000000000000 e96fd2b6e93f338e3f073022e3d464ddae6947b9 Marek Kloza <kloza.marek@gmail.com> 1707913864 +0100	commit (initial): initial commit
-e96fd2b6e93f338e3f073022e3d464ddae6947b9 0000000000000000000000000000000000000000 Marek Kloza <kloza.marek@gmail.com> 1707914030 +0100	Branch: renamed refs/heads/master to refs/heads/main
-0000000000000000000000000000000000000000 e96fd2b6e93f338e3f073022e3d464ddae6947b9 Marek Kloza <kloza.marek@gmail.com> 1707914030 +0100	Branch: renamed refs/heads/master to refs/heads/main
-e96fd2b6e93f338e3f073022e3d464ddae6947b9 19e8dc0c07b55405e9a70ea0dd2d92e09e3aa4ff Marek Kloza <kloza.marek@gmail.com> 1707914595 +0100	commit: wtf
-19e8dc0c07b55405e9a70ea0dd2d92e09e3aa4ff 8e82c074c3d72e02991b7db71a9336b4dc8913a7 Marek Kloza <kloza.marek@gmail.com> 1707914640 +0100	commit: apps.csv.tmpl removed
-8e82c074c3d72e02991b7db71a9336b4dc8913a7 379ef47456732d36d04c3f0598965096f7990843 Marek Kloza <kloza.marek@gmail.com> 1707914907 +0100	commit: changes in script
