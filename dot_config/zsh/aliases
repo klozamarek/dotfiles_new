@@ -179,3 +179,9 @@ alias dot="$HOME/.dotfiles"
 alias sr='sr -browser=w3m'
 alias surfraw='surfraw -browser=brave'
 # }}}
+# +---------+
+# | chezmoi |
+# +---------+
+# {{{
+alias cm="chezmoi"
+# }}}
