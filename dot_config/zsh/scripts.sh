@@ -463,3 +463,70 @@ an() {
   ssh ssserpent@antix "touch \"$HOME/Documents/$filename\" && echo \"$note\" >> \"$HOME/Documents/$filename\""
 }
 #---------------------------------------------------------------}}}
+# +----------------+
+# | configurations |
+# +----------------+
+# {{{--core
+cfg-zshrc() {chezmoi edit /home/ssserpent/.config/zsh/.zshrc ;}
+cfg-zshenv() {chezmoi edit /home/ssserpent/.zshenv ;}
+cfg-zprofile() {chezmoi edit /home/ssserpent/.config/zsh/.zprofile ;}
+cfg-aliases() {chezmoi edit /home/ssserpent/.config/zsh/aliases ;}
+cfg-scripts() {chezmoi edit /home/ssserpent/.config/zsh/scripts.sh ;}
+cfg-xinit() {chezmoi edit /home/ssserpent/.config/X11/.xinitrc ;}
+cfg-xresources() {chezmoi edit /home/ssserpent/.config/X11/.Xresources ;}
+cfg-xauthority() {chezmoi edit /home/ssserpent/.Xauthority ;}
+# --}}}
+# {{{--apps
+cfg-aria2() {chezmoi edit /home/ssserpent/.aria2/aria2.conf ;}
+cfg-afew() {chezmoi edit /home/ssserpent/.config/afew/config}
+cfg-atuin() {chezmoi edit /home/ssserpent/.config/atuin/config.toml ;}
+cfg-bat() {chezmoi edit /home/ssserpent/.config/bat/config ;}
+cfg-btop() {chezmoi edit /home/ssserpent/.config/btop/btop.conf ;}
+cfg-calcurse() {chezmoi edit /home/ssserpent/.config/calcurse/conf ;}
+cfg-chezmoi() {chezmoi edit /home/ssserpent/.config/chezmoi/chezmoi.toml ;}
+cfg-chezmoiexternal() {chezmoi edit /home/ssserpent/.config/local/share/chezmoi/.chezmoiexternal.toml ;}
+cfg-dmenu() {chezmoi edit /home/ssserpent/.config/dmenufm/dmenufm.conf ;}
+cfg-dunst() {chezmoi edit /home/ssserpent/.config/dunst/dunstrc ;}
+cfg-htop() {chezmoi edit /home/ssserpent/.config/htop/htoprc ;}
+cfg-i3conf() {chezmoi edit /home/ssserpent/.config/i3/config ;}
+cfg-i3blocks() {chezmoi edit /home/ssserpent/.config/i3/i3blocks.conf ;}
+cfg-i3status() {chezmoi edit /home/ssserpent/.config/i3/i3status.conf ;}
+cfg-kitty() {chezmoi edit /home/ssserpent/.config/kitty/kitty.conf ;}
+cfg-msmtp() {chezmoi edit /home/ssserpent/.config/msmtp/config ;}
+cfg-mutt() {chezmoi edit /home/ssserpent/.config/mutt/muttrc ;}
+cfg-navi() {chezmoi edit /home/ssserpent/.config/navi/config.yaml ;}
+cfg-neofetch() {chezmoi edit /home/ssserpent/.config/neofetch/config.conf ;}
+cfg-newsboat() {chezmoi edit /home/ssserpent/.config/newsboat/config ;}
+cfg-notmuch() {chezmoi edit /home/ssserpent/.config/notmuch/.notmuch-config ;}
+cfg-nvim() {chezmoi edit /home/ssserpent/.config/nvim/init.vim ;}
+cfg-ranger() {chezmoi edit /home/ssserpent/.config/ranger/rc.conf ;}
+cfg-rangercommands() {chezmoi edit /home/ssserpent/.config/ranger/commands.py ;}
+cfg-rofi() {chezmoi edit /home/ssserpent/.config/rofi/ssserpent.rasi ;}
+cfg-sgpt() {chezmoi edit /home/ssserpent/.config/shell_gpt/.sgptrc ;}
+cfg-solaar() {chezmoi edit /home/ssserpent/.config/solaar/config.yaml ;}
+cfg-stig() {chezmoi edit /home/ssserpent/.config/stig/rc ;}
+cfg-surfraw() {chezmoi edit /home/ssserpent/.config/surfraw/conf ;}
+cfg-termscp() {chezmoi edit /home/ssserpent/.config/termscp/config.toml ;}
+cfg-tmux() {chezmoi edit /home/ssserpent/.config/tmux/tmux.conf ;}
+cfg-tsm() {chezmoi edit /home/ssserpent/.config/transmission-daemon/settings.json ;}
+cfg-vlc() {chezmoi edit /home/ssserpent/.config/vlc/vlcrc ;}
+cfg-ytfzf() {chezmoi edit /home/ssserpent/.config/ytfzf/conf.sh ;}
+cfg-zathura() {chezmoi edit /home/ssserpent/.config/zathura/zathurarc ;}
+cfg-digicamsystem() {chezmoi edit /home/ssserpent/.config/digikam_systemrc ;}
+cfg-digikam() {chezmoi edit /home/ssserpent/.config/digikamrc ;}
+cfg-mimelist() {chezmoi edit /home/ssserpent/.config/mimeapps.list ;}
+cfg-starship() {chezmoi edit /home/ssserpent/.config/starship.toml ;}
+cfg-userdirs() {chezmoi edit /home/ssserpent/.config/user-dirs.dirs ;}
+cfg-gitconfig() {chezmoi edit /home/ssserpent/.gitconfig ;}
+cfg-mbsyncrc() {chezmoi edit /home/ssserpent/.mbsyncrc ;}
+cfg-msmtprc() {chezmoi edit /home/ssserpent/.msmtprc ;}
+cfg-pamgnupg() {chezmoi edit /home/ssserpent/.pam-gnupg ;}
+cfg-urlview() {chezmoi edit /home/ssserpent/.urlview ;}
+cfg-xbindkeys() {chezmoi edit /home/ssserpent/.xbindkeysrc ;}
+cfg-apps() {chezmoi edit /home/ssserpent/apps.csv ;}
+cfg-w3m() {chezmoi edit /home/ssserpent/.w3m/config ;}
+cfg-w3mkeymap() {chezmoi edit /home/ssserpent/.w3m/keymap ;}
+cfg-w3mmailcap() {chezmoi edit /home/ssserpent/.w3m/mailcap ;}
+cfg-w3murimethodmap() {chezmoi edit /home/ssserpent/.w3m/urimethodmap ;}
+# cfg-() {chezmoi edit ;}
+#--}}}
