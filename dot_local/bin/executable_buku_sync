@@ -1,9 +1,0 @@
-#!/bin/sh
-# backup existing database in local directory
-cp $XDG_DATA_HOME/buku/bookmarks.db $XDG_DATA_HOME/buku/bookmarks.db_bak
-# pull operation
-rsync -avzu ssserpent@antix:$XDG_DATA_HOME/buku/bookmarks.db $XDG_DATA_HOME/buku/bookmarks.db
-# push operation
-rsync -avzu $XDG_DATA_HOME/buku/bookmarks.db ssserpent@antix:$XDG_DATA_HOME/buku/bookmarks.db
-# update timestamp on local database
-touch $XDG_DATA_HOME/buku/bookmarks.db
