@@ -1,0 +1,18 @@
+[user_interface]
+text_editor = "/usr/bin/nvim"
+default_protocol = "SCP"
+show_hidden_files = true
+check_for_updates = true
+prompt_on_file_replace = true
+notifications = true
+notification_threshold = 536870912
+
+[remote]
+ssh_config = "/home/ssserpent/.ssh/config"
+
+[remote.ssh_keys]
+"ssserpent@antix" = "/home/ssserpent/.config/termscp/.ssh/ssserpent@antix.key"
+"ssserpent@archlinux" = "/home/ssserpent/.config/termscp/.ssh/ssserpent@archlinux.key"
+"ssserpent@lenovo" = "/home/ssserpent/.config/termscp/.ssh/ssserpent@lenovo.key"
+"a0_a236@termux" = "/home/ssserpent/.config/termscp/.ssh/a0_a236@termux.key"
+"ssserpent@imac" = "/home/ssserpent/.config/termscp/.ssh/ssserpent@imac.key"

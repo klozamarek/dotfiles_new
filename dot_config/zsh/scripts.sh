@@ -483,8 +483,8 @@ cfg-atuin() {chezmoi edit /home/ssserpent/.config/atuin/config.toml ;}
 cfg-bat() {chezmoi edit /home/ssserpent/.config/bat/config ;}
 cfg-btop() {chezmoi edit /home/ssserpent/.config/btop/btop.conf ;}
 cfg-calcurse() {chezmoi edit /home/ssserpent/.config/calcurse/conf ;}
-cfg-chezmoi() {chezmoi edit /home/ssserpent/.config/chezmoi/chezmoi.toml ;}
-cfg-chezmoiexternal() {chezmoi edit /home/ssserpent/.config/local/share/chezmoi/.chezmoiexternal.toml ;}
+cfg-chezmoi() {$EDITOR /home/ssserpent/.config/chezmoi/chezmoi.toml ;}
+cfg-chezmoiexternal() {$EDITOR /home/ssserpent/.config/local/share/chezmoi/.chezmoiexternal.toml ;}
 cfg-dmenu() {chezmoi edit /home/ssserpent/.config/dmenufm/dmenufm.conf ;}
 cfg-dunst() {chezmoi edit /home/ssserpent/.config/dunst/dunstrc ;}
 cfg-htop() {chezmoi edit /home/ssserpent/.config/htop/htoprc ;}

@@ -30,6 +30,18 @@
     type = "git-repo"
     url = "https://github.com/bardisty/gruvbox-rofi.git"
     refreshPeriod = "168h"
+[".config/tmux/plugins/extrakto"]
+    type = "git-repo"
+    url = "https://github.com/laktak/extrakto.git"
+    refreshPeriod = "168h"
+[".config/tmux/plugins/tmux-copycat"]
+    type = "git-repo"
+    url = "https://github.com/tmux-plugins/tmux-copycat.git"
+    refreshPeriod = "168h"
+[".config/tmux/plugins/tpm"]
+    type = "git-repo"
+    url = "https://github.com/tmux-plugins/tpm.git"
+    refreshPeriod = "168h"
 ["Repos/h-m-m"]
     type = "git-repo"
     url = "https://github.com/nadrad/h-m-m.git"
