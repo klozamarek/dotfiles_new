@@ -530,3 +530,86 @@ cfg-w3mmailcap() {chezmoi edit /home/ssserpent/.w3m/mailcap ;}
 cfg-w3murimethodmap() {chezmoi edit /home/ssserpent/.w3m/urimethodmap ;}
 # cfg-() {chezmoi edit ;}
 #--}}}
+#{{{--configurations reload
+#------------------------------------------------------
+# rld-bashrc() { source ~/.bashrc ;}
+rld-font() { fc-cache -v -f ;}
+rld-grub() { sudo grub-mkconfig -o /boot/grub/grub.cfg ;}
+rld-greenclip() { killall greenclip ; nohup greenclip daemon > /dev/null 2>&1 & }
+# rld-keynav() { killall keynav ; keynav daemonize ;}
+rld-updatedb() { sudo updatedb ;}
+# rld-rawdog() { rawdog -Wuwv ;}
+rld-xbindkeys() { killall xbindkeys ; xbindkeys ;}
+# rld-hyperkey() { xmodmap ~/.Xmodmap; killall xcape ; xcape -e 'Hyper_L=Return' ; killall xbindkeys ; xbindkeys ;}
+# rld-xcape() { killall xcape ; xcape -e 'Hyper_L=Return' ;}
+# rld-xdefaults() { xrdb ~/.Xdefaults ;}
+# rld-xmodmap() { xmodmap ~/.Xmodmap ;}
+# rld-xmodmap-uskeyboardlayout() { setxkbmap -layout us ;} # reset back to US keyboard http://unix.stackexchange.com/a/151046
+rld-xresources() { xrdb -load ~/.Xresources ;}
+rld-zshrc() { source ~/.config/zsh/.zshrc ;}
+rld-samba() { sudo systemctl restart nmb.service smb.service ;}
+rld-zshenv() { source ~/.zshenv ;}
+rld-aliases() { source ~/.config/zsh/aliases ;}
+rld-scripts() {source ~/.config/zsh/scripts.sh ;}
+# --}}}
+
+#--{{{ Transmission CLI v2
+#------------------------------------------------------
+# DEMO: http://www.youtube.com/watch?v=ee4XzWuapsE
+# DESC: lightweight torrent client; interface from cli, webui, ncurses, and gui
+# WEBUI:  http://localhost:9091/transmission/web/
+# 	  http://192.168.1.xxx:9091/transmission/web/
+
+tsm-clearcompleted() {
+  transmission-remote -l | grep 100% | grep Done | \
+  awk '{print $1}' | xargs -n 1 -I % transmission-remote -t % -r
+}
+
+# display numbers of ip being blocked by the blocklist (credit: smw from irc #transmission)
+tsm-count() {
+  echo "Blocklist rules:" $(curl -s --data \
+  '{"method": "session-get"}' localhost:9091/transmission/rpc -H \
+  "$(curl -s -D - localhost:9091/transmission/rpc | grep X-Transmission-Session-Id)" \
+  | cut -d: -f 11 | cut -d, -f1)
+}
+
+# DEMO: http://www.youtube.com/watch?v=TyDX50_dC0M
+# DESC: merge multiple ip blocklist into one
+# LINK: https://github.com/gotbletu/shownotes/blob/master/blocklist.sh
+tsm-blocklist() {
+  echo -e "${Red}>>>Stopping Transmission Daemon ${Color_Off}"
+    killall transmission-daemon
+  echo -e "${Yellow}>>>Updating Blocklist ${Color_Off}"
+    ~/.scripts/blocklist.sh
+  echo -e "${Red}>>>Restarting Transmission Daemon ${Color_Off}"
+    transmission-daemon
+    sleep 3
+  echo -e "${Green}>>>Numbers of IP Now Blocked ${Color_Off}"
+    tsm-count
+}
+tsm-altdownloadspeed() { transmission-remote --downlimit "${@:-900}" ;}	# download default to 900K, else enter your own
+tsm-altdownloadspeedunlimited() { transmission-remote --no-downlimit ;}
+tsm-limitupload() { transmission-remote --uplimit "${@:-10}" ;}	# upload default to 10kpbs, else enter your own
+tsm-limituploadunlimited() { transmission-remote --no-uplimit ;}
+tsm-askmorepeers() { transmission-remote -t"$1" --reannounce ;}
+tsm-daemon() { transmission-daemon ;}
+tsm-quit() { killall transmission-daemon ;}
+tsm-add() { transmission-remote --add "$1" ;}
+tsm-hash() { transmission-remote --add "magnet:?xt=urn:btih:$1" ;}       # adding via hash info
+tsm-verify() { transmission-remote --verify "$1" ;}
+tsm-pause() { transmission-remote -t"$1" --stop ;}		# <id> or all
+tsm-start() { transmission-remote -t"$1" --start ;}		# <id> or all
+tsm-purge() { transmission-remote -t"$1" --remove-and-delete ;} # delete data also
+tsm-remove() { transmission-remote -t"$1" --remove ;}		# leaves data alone
+tsm-info() { transmission-remote -t"$1" --info ;}
+tsm-speed() { while true;do clear; transmission-remote -t"$1" -i | grep Speed;sleep 1;done ;}
+tsm-grep() { transmission-remote --list | grep -i "$1" ;}
+tsm() { transmission-remote --list ;}
+tsm-show() { transmission-show "$1" ;}                          # show .torrent file information
+
+# DEMO: http://www.youtube.com/watch?v=hLz7ditUwY8
+# LINK: https://github.com/fagga/transmission-remote-cli
+# DESC: ncurses frontend to transmission-daemon
+tsm-ncurse() { transmission-remote-cli ;}
+
+#--}}}
