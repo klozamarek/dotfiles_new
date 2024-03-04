@@ -93,6 +93,7 @@ git,diff-so-fancy,Human readable git diff
 git,grv,Git repository viewer
 git,gitin,Commit/branch/workdir explorer for git
 git,git-delta,Syntax-highlighting pager for git and diff output
+git,meld,Compare files directories and working copies
 i3,i3-wm,i3 window tile manager
 i3,i3status,i3 status bar
 i3,i3lock,i3 lock monitor
