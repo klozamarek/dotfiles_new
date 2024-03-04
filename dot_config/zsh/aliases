@@ -1,28 +1,16 @@
 #!/usr/bin/env bash
-# +--------+
-# | System |
-# +--------+
-# {{{
+# -- System--{{{
 alias shutdown='sudo shutdown now'
 alias restart='sudo reboot'
 # }}}
-# +-----+
-# | zsh |
-# +-----+
-# {{{
+# -- zsh --{{{
 alias d='dirs -v'
 for index ({1..9}) alias "$index"="cd +${index} > dev/null"; unset index #directory stack
 # }}}
-# +-----+
-# | ssh |
-# +-----+
-# {{{
+# -- ssh --{{{
 alias s='kitty +kitten ssh'
 # }}}
-# +----+
-# | ls |
-# +----+
-# {{{
+# -- ls --{{{
 alias ls='ls --color=auto'
 alias nn='n -d -r -x -C -D -H -Q -P p'
 alias NN='sudo -E n -d -r -x -C -D -H -Q -P p'
@@ -33,18 +21,12 @@ alias lls='ls -lahFtr'  # list sorted by time, reversed
 alias lexa='exa --long --all --header --icons --git'
 alias texa='exa --long --tree --level=3'
 # }}}
-# +----+
-# | cp |
-# +----+
-# {{{
+# -- cp --{{{
 alias cp='cp -iv'
 alias mv='mv -iv'
 alias rm='rm -iv'
 # }}}
-# +--------+
-# | pacman |
-# +--------+
-# {{{
+# -- pacman --{{{
 alias paci='sudo pacman -S'               # install
 alias pachi='sudo pacman -Ql'             # Pacman Has Installed - what files where installed in a package
 alias pacs='sudo pacman -Ss'              # search
@@ -58,10 +40,7 @@ alias pacls="sudo pacman -Qe"
 alias pacc='sudo pacman -Sc'
 alias paccc='sudo pacman -Scc'            # empty the whole cache
 # }}}
-# +-----+
-# | yay |
-# +-----+
-# {{{
+# -- yay --{{{
 alias yayi='yay -S'     # install
 alias yayhi='yay -Ql'   # Yay Has Installed - what files where installed in a package
 alias yays='yay -Ss'    # search
@@ -71,10 +50,7 @@ alias yayrr='yay -Rs'   # remove package with unused dependencies by other softw
 alias yayrc='yay -Sc'   # remove yay's cache
 alias yayls="yay -Qe"
 # }}}
-# +-----+
-# | git |
-# +-----+
-# {{{
+# -- git --{{{
 # Run any git command with a split diff, e.g. `DD gshs`. Think 'delta-double'
 alias DD="DELTA_FEATURES=+side-by-side"
 
@@ -92,91 +68,52 @@ alias gds="git diff --staged"
 alias gdd="DELTA_FEATURES=+side-by-side git diff" # Think 'double-diff'
 alias gdds="DELTA_FEATURES=+side-by-side git diff --staged" # 'double-diff'
 # }}}
-# +------+
-# | grep |
-# +______+
-# {{{
+# -- grep --{{{
 alias grep='grep -P -i --color=auto' # grep w/ Perl regex, ignore case, add color
 # }}}
-# +------+
-# | tmux |
-# +------+
-# {{{
+# -- tmux --{{{
 alias tmuxk='tmux kill-session -t'
 alias tmuxa='tmux attach -t'
 alias tmuxl='tmux list-sessions'
 # }}}
-# +----+
-# | du |
-# +----+
-# {{{
+# -- du --{{{
 alias dud='du -sh * | sort -hr'
 # }}}
-# +----------------+
-# | tree colorized |
-# +----------------+
-# {{{
+# -- tree colorized --{{{
 alias tree='tree -C'
 # }}}
-# +------------+
-# | expressvpn |
-# +------------+
- # {{{
+ # -- express vpn --{{{
 alias vpns='expressvpn status'
 alias vpnc='expressvpn connect'
 alias vpnd='expressvpn disconnect'
 alias vpna='expressvpn activate'
 # }}}
-# +------+
-# | pass |
-# +------+
-# {{{
+# -- pass --{{{
 alias pt='pass tessen -p'
 # }}}
-# +-------+
-# | h-m-m |
-# +-------+
-# {{{
+# -- h-m-m --{{{
 alias hm='h-m-m'
 # }}}
-# +-------+
-# | buku |
-# +------+
-# {{{
+# -- buku --{{{
 alias b='buku --suggest'
 # }}}
-# +-------------+
-# | vim-notmuch |
-# +-------------+
-# {{{
+# -- vim-notmuch --{{{
 alias vnm='nvim -c ":NotMuch"'
 # }}}
-# +------------+
-# | oil-search |
-# +------------+
-# {{{
+# -- oil-search --{{{
 alias os="oil-search"
 # }}}
-# +---------+
-# | folders |
-# +---------+
-# {{{
+# -- folders --{{{
 alias work="$HOME/workspace"
 alias doc="$HOME/Documents"
 alias dow="$HOME/Downloads"
 alias dot="$HOME/.dotfiles"
 # }}}
-# +---------+
-# | surfraw |
-# +---------+
-# {{{
+# -- surfraw --{{{
 alias sr='sr -browser=w3m'
 alias surfraw='surfraw -browser=brave'
 # }}}
-# +---------+
-# | chezmoi |
-# +---------+
-# {{{
+# -- chezmoi --{{{
 alias cm="chezmoi"
 alias cma="chezmoi add"
 alias cme="chezmoi edit"
@@ -190,5 +127,9 @@ alias cmra="chezmoi re-add"
 alias cmcd="chezmoi cd"
 alias cmdoc="chezmoi doctor"
 # }}}
+# -- df --{{{
 alias df='df -hT --total | head -n 1 && df -hT --total | sed '1d' | sort'	# human readable, print filetype, and total
+# }}}
+# -- feh --{{{
 alias feh='feh --auto-zoom --scale-down -g 1360x768 -B white'
+# }}}
