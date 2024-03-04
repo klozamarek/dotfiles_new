@@ -2,11 +2,3 @@ encryption = "age"
 [age]
     identity = "~/.config/chezmoi/key.txt"
     recipient = "age187p3cnpygutvxcrmqenjee0l9eh6l6nl09edzpmh0p67sf00hugsld47k5"
-[diff]
-    command = "meld"
-    args = ["--diff", "{{ .Destination }}", "{{ .Target }}"]
-    pager = "delta"
-    exclude = ["scripts"]
-[merge]
-    command = "nvim"
-    args = ["-d", "{{ .Destination }}", "{{ .Source }}", "{{ .Target }}"]
