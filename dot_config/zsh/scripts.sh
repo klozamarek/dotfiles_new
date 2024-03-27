@@ -456,6 +456,7 @@ cfg-chezmoi() {$EDITOR /home/ssserpent/.config/chezmoi/chezmoi.toml ;}
 cfg-chezmoiexternal() {$EDITOR /home/ssserpent/.config/local/share/chezmoi/.chezmoiexternal.toml ;}
 cfg-dmenu() {chezmoi edit /home/ssserpent/.config/dmenufm/dmenufm.conf ;}
 cfg-dunst() {chezmoi edit /home/ssserpent/.config/dunst/dunstrc ;}
+cfg-epy() {chezmoi edit /home/ssserpent/.config/epy/configuration.json ;}
 cfg-htop() {chezmoi edit /home/ssserpent/.config/htop/htoprc ;}
 cfg-i3conf() {chezmoi edit /home/ssserpent/.config/i3/config ;}
 cfg-i3blocks() {chezmoi edit /home/ssserpent/.config/i3/i3blocks.conf ;}

@@ -35,7 +35,7 @@ Cyan='\e[0;36m'
 White='\e[0;37m'
 
 # download path
-DIANA_DOWNLOAD_DIR="/media/EdoTensei/Aria"
+DIANA_DOWNLOAD_DIR="/home/ssserpent/Downloads/aria2"
 
 main_program () {
 while true; do
