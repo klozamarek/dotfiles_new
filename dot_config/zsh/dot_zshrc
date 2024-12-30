@@ -138,7 +138,6 @@ export PATH="$HOME/.cargo/bin:$PATH"
 # +--------------+
 # {{{
 eval "$(zoxide init zsh)"               # call zoxide
-eval "$(navi widget zsh)"               # call navi
 eval "$(atuin init zsh --disable-ctrl-r)"                # call atuin
 # }}}
 # +-----+
