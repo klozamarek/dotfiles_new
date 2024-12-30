@@ -1,0 +1,59 @@
+#!/bin/bash
+
+# Define variables
+LOCAL_FILES=("/home/ssserpent/.config/local/share/buku/bookmarks.db" "/home/ssserpent/Documents/mydirtynotes.txt")
+REMOTE_USER="ssserpent"
+REMOTE_HOST="antix"
+REMOTE_FILES=("/home/ssserpent/.local/share/buku/bookmarks.db" "/home/ssserpent/Documents/mydirtynotes.txt")
+BACKUP_DIR="/home/ssserpent/Documents/Backups"
+MAX_BACKUPS=5  # Maximum number of backups to keep
+
+# Check if the backup directory exists, create if not
+if [ ! -d "$BACKUP_DIR" ]; then
+    mkdir -p "$BACKUP_DIR"
+fi
+
+# Function to limit backups to MAX_BACKUPS
+limit_backups() {
+    local file_basename=$1
+    local backups
+    backups=$(ls -t "$BACKUP_DIR/${file_basename}"_* 2>/dev/null)  # List backups sorted by time (newest first)
+    count=$(echo "$backups" | wc -l)  # Count the backups
+
+    if (( count > MAX_BACKUPS )); then
+        # Remove oldest backups if more than MAX_BACKUPS exist
+        echo "$backups" | tail -n +$((MAX_BACKUPS + 1)) | xargs -d '\n' rm -f
+    fi
+}
+
+# Main logic
+for i in "${!LOCAL_FILES[@]}"; do
+    LOCAL_FILE="${LOCAL_FILES[$i]}"
+    REMOTE_FILE="${REMOTE_FILES[$i]}"
+    
+    # Backup the local file with a timestamp
+    BACKUP_FILE="$BACKUP_DIR/$(basename "$LOCAL_FILE")_$(date +%Y%m%d%H%M%S).bak"
+    cp -p "$LOCAL_FILE" "$BACKUP_FILE"
+    
+    # Limit the number of backups
+    limit_backups "$(basename "$LOCAL_FILE")"
+    
+    # Get modification times of local and remote files
+    LOCAL_MOD_TIME=$(stat -c %Y "$LOCAL_FILE" 2>/dev/null)
+    REMOTE_MOD_TIME=$(ssh "$REMOTE_USER@$REMOTE_HOST" "stat -c %Y '$REMOTE_FILE'" 2>/dev/null)
+
+    if ! [[ "$LOCAL_MOD_TIME" =~ ^[0-9]+$ ]]; then
+        continue
+    fi
+    
+    if ! [[ "$REMOTE_MOD_TIME" =~ ^[0-9]+$ ]]; then
+        continue
+    fi
+    
+    if (( LOCAL_MOD_TIME > REMOTE_MOD_TIME )); then
+        scp "$LOCAL_FILE" "$REMOTE_USER@$REMOTE_HOST:$REMOTE_FILE"
+    elif (( LOCAL_MOD_TIME < REMOTE_MOD_TIME )); then
+        scp "$REMOTE_USER@$REMOTE_HOST:$REMOTE_FILE" "$LOCAL_FILE"
+    fi
+done
+

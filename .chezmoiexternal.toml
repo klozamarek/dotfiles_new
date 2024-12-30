@@ -49,6 +49,8 @@
     type = "git-repo"
     url = "https://github.com/pystardust/ytfzf.git"
     refreshPeriod = "168h"
+<<<<<<< HEAD
+||||||| 0b6fa5d
 [".config/min/userscripts/yt-block.js"]
     type = "file"
     url = "https://raw.githubusercontent.com/alisanoelia/yt-block/main/yt-block.js"
@@ -57,3 +59,13 @@
     type = "file"
     url = "https://raw.githubusercontent.com/PalmerAL/min-dark-mode-userscript/master/dark-mode.js"
     refreshPeriod = "168h"
+=======
+#[".config/min/userscripts/yt-block.js"]
+#    type = "file"
+#   url = "https://raw.githubusercontent.com/alisanoelia/yt-block/main/yt-block.js"
+#   refreshPeriod = "168h"
+ [".config/min/userscripts/dark-mode.js"]
+    type = "file"
+    url = "https://raw.githubusercontent.com/PalmerAL/min-dark-mode-userscript/master/dark-mode.js"
+    refreshPeriod = "168h"
+>>>>>>> 8882c93fc571d2abf8a29cccb5617957df640170

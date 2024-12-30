@@ -46,3 +46,6 @@ export WWW_HOME="https://duckduckgo.com/lite"
 
 # export path to ruby gems
 export PATH="/home/ssserpent/.config/local/share/gem/ruby/3.0.0/bin:$PATH"
+
+# export path to go/bin
+export PATH="/home/ssserpent/go/bin:$PATH"

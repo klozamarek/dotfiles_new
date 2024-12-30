@@ -1,5 +1,6 @@
 {
     "alt-speed-down": 50,
+    "alt-speed-enabled": false,
     "alt-speed-time-begin": 540,
     "alt-speed-time-day": 127,
     "alt-speed-time-enabled": false,
@@ -16,7 +17,7 @@
     "cache-size-mb": 4,
     "default-trackers": "",
     "dht-enabled": true,
-    "download-dir": "/run/media/ssserpent/250_HDD/torrents",
+    "download-dir": "/home/ssserpent/Downloads/torrents",
     "download-queue-enabled": true,
     "download-queue-size": 5,
     "encryption": 1,

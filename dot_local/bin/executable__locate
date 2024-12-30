@@ -12,6 +12,6 @@
 #         2. Remove /media from PRUNEPATHS
 #         3. sudo updatedb
 
-selected="$(locate home media | fzf -e -i -m --reverse --delimiter / --with-nth -3,-2,-1)"
+selected="$(locate /home | fzf -e -i -m --reverse --delimiter / --with-nth -3,-2,-1)"
 [ -z "$selected" ] && exit
 echo "$selected" | while read -r line ; do setsid xdg-open "$line" ; done

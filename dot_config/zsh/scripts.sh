@@ -462,11 +462,13 @@ cfg-i3conf() {chezmoi edit /home/ssserpent/.config/i3/config ;}
 cfg-i3blocks() {chezmoi edit /home/ssserpent/.config/i3/i3blocks.conf ;}
 cfg-i3status() {chezmoi edit /home/ssserpent/.config/i3/i3status.conf ;}
 cfg-kitty() {chezmoi edit /home/ssserpent/.config/kitty/kitty.conf ;}
+cfg-session() {chezmoi edit /home/ssserpent/.config/kitty/session ;}
 cfg-msmtp() {chezmoi edit /home/ssserpent/.config/msmtp/config ;}
 cfg-mutt() {chezmoi edit /home/ssserpent/.config/mutt/muttrc ;}
 cfg-navi() {chezmoi edit /home/ssserpent/.config/navi/config.yaml ;}
 cfg-neofetch() {chezmoi edit /home/ssserpent/.config/neofetch/config.conf ;}
 cfg-newsboat() {chezmoi edit /home/ssserpent/.config/newsboat/config ;}
+cfg-newsboaturls() {chezmoi edit /home/ssserpent/.config/newsboat/urls ;}
 cfg-notmuch() {chezmoi edit /home/ssserpent/.config/notmuch/.notmuch-config ;}
 cfg-nvim() {chezmoi edit /home/ssserpent/.config/nvim/init.vim ;}
 cfg-ranger() {chezmoi edit /home/ssserpent/.config/ranger/rc.conf ;}

@@ -11,8 +11,16 @@ notification_threshold = 536870912
 ssh_config = "/home/ssserpent/.ssh/config"
 
 [remote.ssh_keys]
+<<<<<<< HEAD
+"ssserpent@antix" = "/home/ssserpent/.config/termscp/.ssh/ssserpent@antix.key"
+||||||| 0b6fa5d
 "ssserpent@antix" = "/home/ssserpent/.config/termscp/.ssh/ssserpent@antix.key"
 "ssserpent@archlinux" = "/home/ssserpent/.config/termscp/.ssh/ssserpent@archlinux.key"
 "ssserpent@lenovo" = "/home/ssserpent/.config/termscp/.ssh/ssserpent@lenovo.key"
 "a0_a236@termux" = "/home/ssserpent/.config/termscp/.ssh/a0_a236@termux.key"
 "ssserpent@imac" = "/home/ssserpent/.config/termscp/.ssh/ssserpent@imac.key"
+=======
+"ssserpent@samsung" = "/home/ssserpent/.config/termscp/.ssh/ssserpent@samsung.key"
+"ssserpent@imac" = "/home/ssserpent/.config/termscp/.ssh/ssserpent@imac.key"
+"ssserpent@antix" = "/home/ssserpent/.config/termscp/.ssh/ssserpent@antix.key"
+>>>>>>> 8882c93fc571d2abf8a29cccb5617957df640170

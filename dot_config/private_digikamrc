@@ -5,11 +5,11 @@ Pattern History List=\\0
 Options are expanded=true
 
 [Album Settings]
-Album Collections=,Category,Friends,Holidays,Miscellaneous,Nature,Party,Todo,Travel
+Album Collections=Category,Friends,Holidays,Miscellaneous,Nature,Party,Todo,Travel
 Album Monitoring=false
 Album Sort Role=0
 All Groups Open=false
-Default Icon Size=142
+Default Icon Size=150
 Default Tree Face Size=48
 Default Tree Icon Size=22
 Icon Show Aspect Ratio=false
@@ -28,26 +28,26 @@ Icon Show Resolution=false
 Icon Show Size=false
 Icon Show Tags=true
 Icon Show Title=true
-IconView Font=Sans Serif,9,-1,5,50,0,0,0,0,0
+IconView Font=Sans Serif,9,-1,5,400,0,0,0,0,0,0,0,0,0,0,1
 Image Group Mode=2
 Image Group Sort Order=0
-Image Sort Order=2
+Image Sort Order=0
 Image Sorting=0
 Item Left Click Action=0
-Preview Convert To Eight Bit=true
+Preview Convert To Eight Bit=false
 Preview Load Full Image Size=false
 Preview Scale Fit To Window=false
 Preview Show Icons=true
 Rating Filter Condition=0
 Recursive Albums=false
 Recursive Tags=true
-Show Album ToolTips=true
+Show Album ToolTips=false
 Show Folder Tree View Items Count=false
 Show Thumbbar=true
-Show ToolTips=true
+Show ToolTips=false
 Sidebar Title Style=2
-Theme=ShadeOfGray
-ToolTips Font=Sans Serif,9,-1,5,50,0,0,0,0,0
+Theme=GrayCard
+ToolTips Font=Sans Serif,9,-1,5,400,0,0,0,0,0,0,0,0,0,0,1
 ToolTips Show Album Caption=true
 ToolTips Show Album Category=true
 ToolTips Show Album Collection=true
@@ -80,14 +80,14 @@ ToolTips Show Video Aspect Ratio=true
 ToolTips Show Video Codec=true
 ToolTips Show Video Duration=true
 ToolTips Show Video Frame Rate=true
-TreeView Font=Sans Serif,9,-1,5,50,0,0,0,0,0
+TreeView Font=Sans Serif,9,-1,5,400,0,0,0,0,0,0,0,0,0,0,1
 Update Type=0
 
 [AlbumFolderView Sidebar]
-CurrentIndex=1284
-Expansion=0,691,1917,1918,1916,1294,1080,1296,1297,1298,1299,1300,1301,1303,1696,1238,1261,1268,1269,1779,1780,1789,1791,1792,1794,1795,1189,1796,695,1798,1799,1797,1801,1802,1803,1805,1807,1808,1809,1810,1811,1812,1813,1814,1815,1209,1816,1817,1212,1818,1819,1820,1821,1824,1830,1831,1832,1833,1834,1835,1263,1836,1837,1842,1843,1845,1848,1850,1851,1852,1853,1854,1856,1858,1859,1865,1868,1869,1870,1871,1872,1873,1874,1210,699,1899,1901,1667,1666,1665,703,1913,1915,705,706,707,708,709,711,773,790,791,802,803,829,830,831,832,833,834,835,836,837,838,839,840,841,842,843,844,845,846,847,858,859,860,861,862,867,868,869,876,877,881,882,883,898,899,901,902,903,904,905,906,907,908,909,910,911,912,913,914,915,916,917,918,919,920,921,922,923,924,925,926,927,929,930,931,932,933,934,935,936,937,938,939,940,942,943,944,945,946,947,948,949,950,951,957,958,959,960,961,962,963,968,969,970,971,972,973,974,975,976,977,978,979,980,981,1025,1026,1028,1029,1030,1031,1032,1033,1034,1035,1036,1037,1038,1039,1040,1041,1042,1043,1044,1045,1047,1048,1049,1050,1052,1053,1054,1055,1056,1057,1058,1059,1060,1061,1062,1063,1064,1065,1066,1069,1070,1071,1072,1073,1074,1076,1921,1922,1923,1271,1289,1279,1523,1525,1526,1527,1529,1530,1683,1532,1663,1664,1668,1280,1281,1282,1284,1285,1283,1286,1545,1546,1547,1548,1531,1685,1686,1687,1688,1689,1690,1691,1692,1693,1694,1695,1287,-2
+CurrentIndex=795
+Expansion=0,1,637,641,642,643,793,644,794,795,796,802,803
 RestoreChecked=false
-Selection=1284
+Selection=795
 SortColumn=0
 SortOrder=0
 
@@ -95,10 +95,10 @@ SortOrder=0
 CaseSensitive=0
 
 [AlbumSelectWidget]
-AlbumTreeViewCurrentIndex=1921
-AlbumTreeViewExpansion=691,692,1077
+AlbumTreeViewCurrentIndex=641
+AlbumTreeViewExpansion=1
 AlbumTreeViewRestoreChecked=false
-AlbumTreeViewSelection=1921
+AlbumTreeViewSelection=641
 AlbumTreeViewSortColumn=0
 AlbumTreeViewSortOrder=0
 CaseSensitive=0
@@ -108,784 +108,115 @@ Sync Baloo to Digikam=false
 Sync Digikam to Baloo=false
 
 [Batch Queue Manager Settings]
-1440x900 screen: Height=855
-1440x900 screen: Width=718
-1440x900 screen: XPosition=0
-1440x900 screen: YPosition=0
-1920x1080 screen: XPosition=0
-1920x1080 screen: YPosition=0
-2 screens: XPosition=0
-2 screens: YPosition=0
-BqmBottomSplitter=AAAA/wAAAAEAAAACAAABhAAAAQoB/////wEAAAABAA==
-BqmTopSplitter=AAAA/wAAAAEAAAADAAABCgAAAQYAAAC6Af////8BAAAAAQA=
-BqmVerticalSplitter=AAAA/wAAAAEAAAACAAAA9wAAAZ8B/////wEAAAACAA==
-DP-1=DP-1
-DP-2 VGA-1=DP-2
-State=AAAA/wAAAAD9AAAAAAAAAs4AAAMFAAAABAAAAAQAAAAIAAAACPwAAAABAAAAAgAAAAEAAAAWAG0AYQBpAG4AVABvAG8AbABCAGEAcgEAAAAA/////wAAAAAAAAAA
-ToolBarsMovable=Disabled
-VGA-1=VGA-1
+BqmBottomSplitter=AAAA/wAAAAEAAAAC//////////8B/////wEAAAABAA==
+BqmTopSplitter=AAAA/wAAAAEAAAAD////////////////Af////8BAAAAAQA=
+BqmVerticalSplitter=AAAA/wAAAAEAAAAC//////////8B/////wEAAAACAA==
 
 [Camera Settings]
-1440x900 screen: Height=855
-1440x900 screen: Width=1440
-1440x900 screen: XPosition=0
-1440x900 screen: YPosition=22
-DefaultTargetAlbumId=0
-FileSaveConflictRule=1
-FullScreen Hide SideBars=false
-FullScreen Hide StatusBar=false
-FullScreen Hide ThumbBar=true
-FullScreen Hide ToolBars=false
-LastTargetAlbum=1921
-MenuBar=Disabled
-RestorePositionForNextInstance=false
-State=AAAA/wAAAAD9AAAAAAAABaAAAAMTAAAABAAAAAQAAAAIAAAACPwAAAABAAAAAgAAAAEAAAAWAG0AYQBpAG4AVABvAG8AbABCAGEAcgEAAAAA/////wAAAAAAAAAA
+AlbumBox Expanded=false
+AutoAlbumDate=false
+AutoAlbumExt=false
+AutoRotate=true
+BackupOriginalRawFile=false
+Case Type=0
+CompressLossLess=true
+ConvertDng=false
+ConvertJpeg=false
+CustomDateFormat=
+DNGSettings Expanded=false
+DocumentName=false
+FixDateTime=false
+FolderDateFormat=0
+LastTargetAlbum=641
+LossLessFormat=0
+Manual Rename String=
+OnFlyBox Expanded=true
+PreviewMode=2
+Rename Method=0
+RenameCustomizer Expanded=true
+Script=
+ScriptingBox Expanded=false
+ShowLog=false
+SplitterState=AAAA/wAAAAEAAAACAAAOGgAAATsB/////wAAAAABAQ==
+Template=1
 ToolBarsMovable=Disabled
-TurnHighQualityThumbs=false
-UseDefaultTargetAlbum=false
-UseFileMetadata=false
-VGA-1=VGA-1
 
-[Collection Settings]
-LastAddedCollectionPath=
+[CameraGui Sidebar Right]
+ActiveTab=0
+Minimized=true
+RestoreSize=-1
 
-[Color Management]
-BPCAlgorithm=true
-DefaultMismatchBehavior=2049
-DefaultMissingProfileBehavior=2050
-DefaultPath=
-DefaultUncalibratedBehavior=2080
-DoGamutCheck=0
-EnableCM=true
-GamutCheckMaskColor=126,255,255
-LastMismatchBehavior=2049
-LastMissingProfileBehavior=2050
-LastSpecifiedAssignProfile[$e]=/usr/share/digikam/profiles/
-LastSpecifiedInputProfile=
-LastUncalibratedBehavior=2080
-ManagedPreviews=true
-ManagedView=true
-MonitorProfileFile[$e]=/usr/share/digikam/profiles/srgb-d65.icm
-ProofingRenderingIntent=3
-RenderingIntent=0
-WorkProfileFile[$e]=/usr/share/digikam/profiles/srgb-d65.icm
+[CameraGui Sidebar Right][Camera Item Properties Tab]
+FileProperties Expanded=true
+PhotographProperties Expanded=true
+VideoProperties Expanded=true
+
+[CameraGui Sidebar Right][GPS Properties Tab]
+Sort Order=0
+Web GPS Locator=0
+
+[CameraGui Sidebar Right][GPS Properties Tab][Map Widget]
+Backend=marble
+Center=geo:52,6
+GoogleMaps Map Type=ROADMAP
+GoogleMaps Show Map Type Control=true
+GoogleMaps Show Navigation Control=true
+GoogleMaps Show Scale Control=true
+Marble Map Theme=earth/openstreetmap/openstreetmap.dgml
+Marble Projection=spherical
+Marble Show Compass=false
+Marble Show Navigation=true
+Marble Show Overview Map=false
+Marble Show Scale Bar=false
+Marker Grouping Radius=1
+Mouse Mode=0
+Preview Grouped Items=true
+Preview Single Items=true
+Show Thumbnails=true
+Show numbers on items=true
+Sticky Mode State=false
+Thumbnail Grouping Radius=30
+Thumbnail Size=60
+Zoom=marble:900
+
+[CameraGui Sidebar Right][Metadata Properties Tab]
+Current EXIF Item=
+Current ExifTool Item=
+Current IPTC Item=
+Current MAKERNOTE Item=
+Current XMP Item=
+EXIF Level=0
+EXIFTOOL Level=0
+IPTC Level=0
+ImagePropertiesMetaData Tab=0
+MAKERNOTE Level=0
+XMP Level=0
 
 [CoreDB Settings]
 Recently Used Tags=
 
-[DMetadata Settings]
-readingAllTags=false
-unifyReadWrite=true
-
-[DMetadata Settings][readCaptionNamespaces][#0000]
-index=0
-isDefault=true
-isDisabled=false
-namespaceName=Xmp.dc.description
-nsType=3
-secondNameOpts=0
-specialOpts=2
-subspace=2
-tagPaths=1
-
-[DMetadata Settings][readCaptionNamespaces][#0001]
-index=1
-isDefault=true
-isDisabled=false
-namespaceName=Xmp.exif.UserComment
-nsType=3
-secondNameOpts=0
-specialOpts=1
-subspace=2
-tagPaths=1
-
-[DMetadata Settings][readCaptionNamespaces][#0002]
-index=2
-isDefault=true
-isDisabled=false
-namespaceName=Xmp.tiff.ImageDescription
-nsType=3
-secondNameOpts=0
-specialOpts=1
-subspace=2
-tagPaths=1
-
-[DMetadata Settings][readCaptionNamespaces][#0003]
-index=3
-isDefault=true
-isDisabled=false
-namespaceName=Xmp.acdsee.notes
-nsType=3
-secondNameOpts=0
-specialOpts=3
-subspace=2
-tagPaths=1
-
-[DMetadata Settings][readCaptionNamespaces][#0004]
-index=4
-isDefault=true
-isDisabled=false
-namespaceName=JPEG/TIFF Comments
-nsType=3
-secondNameOpts=0
-specialOpts=4
-subspace=2
-tagPaths=1
-
-[DMetadata Settings][readCaptionNamespaces][#0005]
-index=5
-isDefault=true
-isDisabled=false
-namespaceName=Exif.Image.ImageDescription
-nsType=3
-secondNameOpts=0
-specialOpts=0
-subspace=0
-tagPaths=1
-
-[DMetadata Settings][readCaptionNamespaces][#0006]
-index=6
-isDefault=true
-isDisabled=false
-namespaceName=Exif.Photo.UserComment
-nsType=3
-secondNameOpts=0
-specialOpts=0
-subspace=0
-tagPaths=1
-
-[DMetadata Settings][readCaptionNamespaces][#0007]
-index=7
-isDefault=true
-isDisabled=false
-namespaceName=Exif.Image.XPComment
-nsType=3
-secondNameOpts=0
-specialOpts=0
-subspace=0
-tagPaths=1
-
-[DMetadata Settings][readCaptionNamespaces][#0008]
-index=8
-isDefault=true
-isDisabled=false
-namespaceName=Iptc.Application2.Caption
-nsType=3
-secondNameOpts=0
-specialOpts=0
-subspace=1
-tagPaths=1
-
-[DMetadata Settings][readColor labelNamespaces][#0000]
-index=0
-isDefault=true
-isDisabled=false
-namespaceName=Xmp.digiKam.ColorLabel
-nsType=5
-secondNameOpts=0
-specialOpts=0
-subspace=2
-tagPaths=1
-
-[DMetadata Settings][readColor labelNamespaces][#0001]
-index=1
-isDefault=true
-isDisabled=false
-namespaceName=Xmp.xmp.Label
-nsType=5
-secondNameOpts=0
-specialOpts=0
-subspace=2
-tagPaths=1
-
-[DMetadata Settings][readColor labelNamespaces][#0002]
-index=2
-isDefault=true
-isDisabled=false
-namespaceName=Xmp.photoshop.Urgency
-nsType=5
-secondNameOpts=0
-specialOpts=0
-subspace=2
-tagPaths=1
-
-[DMetadata Settings][readRatingNamespaces][#0000]
-convertRatio=0,1,2,3,4,5
-index=0
-isDefault=true
-isDisabled=false
-namespaceName=Xmp.xmp.Rating
-nsType=2
-secondNameOpts=0
-specialOpts=0
-subspace=2
-tagPaths=1
-
-[DMetadata Settings][readRatingNamespaces][#0001]
-convertRatio=0,1,2,3,4,5
-index=1
-isDefault=true
-isDisabled=false
-namespaceName=Xmp.acdsee.rating
-nsType=2
-secondNameOpts=0
-specialOpts=0
-subspace=2
-tagPaths=1
-
-[DMetadata Settings][readRatingNamespaces][#0002]
-convertRatio=0,1,25,50,75,99
-index=2
-isDefault=true
-isDisabled=false
-namespaceName=Xmp.MicrosoftPhoto.Rating
-nsType=2
-secondNameOpts=0
-specialOpts=0
-subspace=2
-tagPaths=1
-
-[DMetadata Settings][readRatingNamespaces][#0003]
-convertRatio=0,1,2,3,4,5
-index=3
-isDefault=true
-isDisabled=false
-namespaceName=Exif.Image.Rating
-nsType=2
-secondNameOpts=0
-specialOpts=0
-subspace=0
-tagPaths=1
-
-[DMetadata Settings][readRatingNamespaces][#0004]
-convertRatio=0,1,25,50,75,99
-index=4
-isDefault=true
-isDisabled=false
-namespaceName=Exif.Image.RatingPercent
-nsType=2
-secondNameOpts=0
-specialOpts=0
-subspace=0
-tagPaths=1
-
-[DMetadata Settings][readRatingNamespaces][#0005]
-convertRatio=8,6,5,4,2,1
-index=5
-isDefault=true
-isDisabled=false
-namespaceName=Iptc.Application2.Urgency
-nsType=2
-secondNameOpts=0
-specialOpts=0
-subspace=1
-tagPaths=1
-
-[DMetadata Settings][readTagsNamespaces][#0000]
-index=0
-isDefault=true
-isDisabled=false
-namespaceName=Xmp.digiKam.TagsList
-nsType=0
-secondNameOpts=0
-separator=/
-specialOpts=6
-subspace=2
-tagPaths=1
-
-[DMetadata Settings][readTagsNamespaces][#0001]
-index=1
-isDefault=true
-isDisabled=false
-namespaceName=Xmp.MicrosoftPhoto.LastKeywordXMP
-nsType=0
-secondNameOpts=0
-separator=/
-specialOpts=5
-subspace=2
-tagPaths=1
-
-[DMetadata Settings][readTagsNamespaces][#0002]
-alternativeName=Xmp.lr.HierarchicalSubject
-index=2
-isDefault=true
-isDisabled=false
-namespaceName=Xmp.lr.hierarchicalSubject
-nsType=0
-secondNameOpts=6
-separator=|
-specialOpts=5
-subspace=2
-tagPaths=1
-
-[DMetadata Settings][readTagsNamespaces][#0003]
-index=3
-isDefault=true
-isDisabled=false
-namespaceName=Xmp.mediapro.CatalogSets
-nsType=0
-secondNameOpts=0
-separator=|
-specialOpts=5
-subspace=2
-tagPaths=1
-
-[DMetadata Settings][readTagsNamespaces][#0004]
-index=4
-isDefault=true
-isDisabled=false
-namespaceName=Xmp.acdsee.categories
-nsType=0
-secondNameOpts=0
-separator=/
-specialOpts=7
-subspace=2
-tagPaths=1
-
-[DMetadata Settings][readTagsNamespaces][#0005]
-index=5
-isDefault=true
-isDisabled=false
-namespaceName=Xmp.dc.subject
-nsType=0
-secondNameOpts=0
-separator=/
-specialOpts=5
-subspace=2
-tagPaths=0
-
-[DMetadata Settings][readTagsNamespaces][#0006]
-index=6
-isDefault=true
-isDisabled=false
-namespaceName=Iptc.Application2.Keywords
-nsType=0
-secondNameOpts=0
-specialOpts=0
-subspace=1
-tagPaths=0
-
-[DMetadata Settings][readTagsNamespaces][#0007]
-index=7
-isDefault=true
-isDisabled=false
-namespaceName=Exif.Image.XPKeywords
-nsType=0
-secondNameOpts=0
-separator=;
-specialOpts=0
-subspace=0
-tagPaths=0
-
-[DMetadata Settings][readTitleNamespaces][#0000]
-index=0
-isDefault=true
-isDisabled=false
-namespaceName=Xmp.dc.title
-nsType=1
-secondNameOpts=0
-specialOpts=2
-subspace=2
-tagPaths=1
-
-[DMetadata Settings][readTitleNamespaces][#0001]
-index=1
-isDefault=true
-isDisabled=false
-namespaceName=Xmp.acdsee.caption
-nsType=1
-secondNameOpts=0
-specialOpts=3
-subspace=2
-tagPaths=1
-
-[DMetadata Settings][readTitleNamespaces][#0002]
-index=2
-isDefault=true
-isDisabled=false
-namespaceName=Iptc.Application2.ObjectName
-nsType=1
-secondNameOpts=0
-specialOpts=0
-subspace=1
-tagPaths=1
-
-[DMetadata Settings][readTitleNamespaces][#0003]
-index=3
-isDefault=true
-isDisabled=false
-namespaceName=Exif.Image.XPTitle
-nsType=1
-secondNameOpts=0
-specialOpts=0
-subspace=0
-tagPaths=1
-
-[DMetadata Settings][writeCaptionNamespaces][#0000]
-index=0
-isDefault=true
-isDisabled=false
-namespaceName=Xmp.dc.description
-nsType=3
-secondNameOpts=0
-specialOpts=2
-subspace=2
-tagPaths=1
-
-[DMetadata Settings][writeCaptionNamespaces][#0001]
-index=1
-isDefault=true
-isDisabled=false
-namespaceName=Xmp.exif.UserComment
-nsType=3
-secondNameOpts=0
-specialOpts=1
-subspace=2
-tagPaths=1
-
-[DMetadata Settings][writeCaptionNamespaces][#0002]
-index=2
-isDefault=true
-isDisabled=false
-namespaceName=Xmp.tiff.ImageDescription
-nsType=3
-secondNameOpts=0
-specialOpts=1
-subspace=2
-tagPaths=1
-
-[DMetadata Settings][writeCaptionNamespaces][#0003]
-index=3
-isDefault=true
-isDisabled=false
-namespaceName=Xmp.acdsee.notes
-nsType=3
-secondNameOpts=0
-specialOpts=3
-subspace=2
-tagPaths=1
-
-[DMetadata Settings][writeCaptionNamespaces][#0004]
-index=4
-isDefault=true
-isDisabled=false
-namespaceName=JPEG/TIFF Comments
-nsType=3
-secondNameOpts=0
-specialOpts=4
-subspace=2
-tagPaths=1
-
-[DMetadata Settings][writeCaptionNamespaces][#0005]
-index=5
-isDefault=true
-isDisabled=false
-namespaceName=Exif.Image.ImageDescription
-nsType=3
-secondNameOpts=0
-specialOpts=0
-subspace=0
-tagPaths=1
-
-[DMetadata Settings][writeCaptionNamespaces][#0006]
-index=6
-isDefault=true
-isDisabled=false
-namespaceName=Exif.Photo.UserComment
-nsType=3
-secondNameOpts=0
-specialOpts=0
-subspace=0
-tagPaths=1
-
-[DMetadata Settings][writeCaptionNamespaces][#0007]
-index=7
-isDefault=true
-isDisabled=false
-namespaceName=Exif.Image.XPComment
-nsType=3
-secondNameOpts=0
-specialOpts=0
-subspace=0
-tagPaths=1
-
-[DMetadata Settings][writeCaptionNamespaces][#0008]
-index=8
-isDefault=true
-isDisabled=false
-namespaceName=Iptc.Application2.Caption
-nsType=3
-secondNameOpts=0
-specialOpts=0
-subspace=1
-tagPaths=1
-
-[DMetadata Settings][writeColor labelNamespaces][#0000]
-index=0
-isDefault=true
-isDisabled=false
-namespaceName=Xmp.digiKam.ColorLabel
-nsType=5
-secondNameOpts=0
-specialOpts=0
-subspace=2
-tagPaths=1
-
-[DMetadata Settings][writeColor labelNamespaces][#0001]
-index=1
-isDefault=true
-isDisabled=false
-namespaceName=Xmp.xmp.Label
-nsType=5
-secondNameOpts=0
-specialOpts=0
-subspace=2
-tagPaths=1
-
-[DMetadata Settings][writeColor labelNamespaces][#0002]
-index=2
-isDefault=true
-isDisabled=false
-namespaceName=Xmp.photoshop.Urgency
-nsType=5
-secondNameOpts=0
-specialOpts=0
-subspace=2
-tagPaths=1
-
-[DMetadata Settings][writeRatingNamespaces][#0000]
-convertRatio=0,1,2,3,4,5
-index=0
-isDefault=true
-isDisabled=false
-namespaceName=Xmp.xmp.Rating
-nsType=2
-secondNameOpts=0
-specialOpts=0
-subspace=2
-tagPaths=1
-
-[DMetadata Settings][writeRatingNamespaces][#0001]
-convertRatio=0,1,2,3,4,5
-index=1
-isDefault=true
-isDisabled=false
-namespaceName=Xmp.acdsee.rating
-nsType=2
-secondNameOpts=0
-specialOpts=0
-subspace=2
-tagPaths=1
-
-[DMetadata Settings][writeRatingNamespaces][#0002]
-convertRatio=0,1,25,50,75,99
-index=2
-isDefault=true
-isDisabled=false
-namespaceName=Xmp.MicrosoftPhoto.Rating
-nsType=2
-secondNameOpts=0
-specialOpts=0
-subspace=2
-tagPaths=1
-
-[DMetadata Settings][writeRatingNamespaces][#0003]
-convertRatio=0,1,2,3,4,5
-index=3
-isDefault=true
-isDisabled=false
-namespaceName=Exif.Image.Rating
-nsType=2
-secondNameOpts=0
-specialOpts=0
-subspace=0
-tagPaths=1
-
-[DMetadata Settings][writeRatingNamespaces][#0004]
-convertRatio=0,1,25,50,75,99
-index=4
-isDefault=true
-isDisabled=false
-namespaceName=Exif.Image.RatingPercent
-nsType=2
-secondNameOpts=0
-specialOpts=0
-subspace=0
-tagPaths=1
-
-[DMetadata Settings][writeRatingNamespaces][#0005]
-convertRatio=8,6,5,4,2,1
-index=5
-isDefault=true
-isDisabled=false
-namespaceName=Iptc.Application2.Urgency
-nsType=2
-secondNameOpts=0
-specialOpts=0
-subspace=1
-tagPaths=1
-
-[DMetadata Settings][writeTagsNamespaces][#0000]
-index=0
-isDefault=true
-isDisabled=false
-namespaceName=Xmp.digiKam.TagsList
-nsType=0
-secondNameOpts=0
-separator=/
-specialOpts=6
-subspace=2
-tagPaths=1
-
-[DMetadata Settings][writeTagsNamespaces][#0001]
-index=1
-isDefault=true
-isDisabled=false
-namespaceName=Xmp.MicrosoftPhoto.LastKeywordXMP
-nsType=0
-secondNameOpts=0
-separator=/
-specialOpts=5
-subspace=2
-tagPaths=1
-
-[DMetadata Settings][writeTagsNamespaces][#0002]
-alternativeName=Xmp.lr.HierarchicalSubject
-index=2
-isDefault=true
-isDisabled=false
-namespaceName=Xmp.lr.hierarchicalSubject
-nsType=0
-secondNameOpts=6
-separator=|
-specialOpts=5
-subspace=2
-tagPaths=1
-
-[DMetadata Settings][writeTagsNamespaces][#0003]
-index=3
-isDefault=true
-isDisabled=false
-namespaceName=Xmp.mediapro.CatalogSets
-nsType=0
-secondNameOpts=0
-separator=|
-specialOpts=5
-subspace=2
-tagPaths=1
-
-[DMetadata Settings][writeTagsNamespaces][#0004]
-index=4
-isDefault=true
-isDisabled=false
-namespaceName=Xmp.acdsee.categories
-nsType=0
-secondNameOpts=0
-separator=/
-specialOpts=7
-subspace=2
-tagPaths=1
-
-[DMetadata Settings][writeTagsNamespaces][#0005]
-index=5
-isDefault=true
-isDisabled=false
-namespaceName=Xmp.dc.subject
-nsType=0
-secondNameOpts=0
-separator=/
-specialOpts=5
-subspace=2
-tagPaths=0
-
-[DMetadata Settings][writeTagsNamespaces][#0006]
-index=6
-isDefault=true
-isDisabled=false
-namespaceName=Iptc.Application2.Keywords
-nsType=0
-secondNameOpts=0
-specialOpts=0
-subspace=1
-tagPaths=0
-
-[DMetadata Settings][writeTagsNamespaces][#0007]
-index=7
-isDefault=true
-isDisabled=false
-namespaceName=Exif.Image.XPKeywords
-nsType=0
-secondNameOpts=0
-separator=;
-specialOpts=0
-subspace=0
-tagPaths=0
-
-[DMetadata Settings][writeTitleNamespaces][#0000]
-index=0
-isDefault=true
-isDisabled=false
-namespaceName=Xmp.dc.title
-nsType=1
-secondNameOpts=0
-specialOpts=2
-subspace=2
-tagPaths=1
-
-[DMetadata Settings][writeTitleNamespaces][#0001]
-index=1
-isDefault=true
-isDisabled=false
-namespaceName=Xmp.acdsee.caption
-nsType=1
-secondNameOpts=0
-specialOpts=3
-subspace=2
-tagPaths=1
-
-[DMetadata Settings][writeTitleNamespaces][#0002]
-index=2
-isDefault=true
-isDisabled=false
-namespaceName=Iptc.Application2.ObjectName
-nsType=1
-secondNameOpts=0
-specialOpts=0
-subspace=1
-tagPaths=1
-
-[DMetadata Settings][writeTitleNamespaces][#0003]
-index=3
-isDefault=true
-isDisabled=false
-namespaceName=Exif.Image.XPTitle
-nsType=1
-secondNameOpts=0
-specialOpts=0
-subspace=0
-tagPaths=1
-
 [Database Settings]
 Database Connectoptions=
-Database Encrypted Password=AwLk5OQ=
+Database Encrypted Password=AwIPDw8=
 Database Hostname=
-Database Name=/run/media/ssserpent/bckp/Obrazy/
-Database Name Face=/run/media/ssserpent/bckp/Obrazy/
-Database Name Similarity=/run/media/ssserpent/bckp/Obrazy/
-Database Name Thumbnails=/run/media/ssserpent/bckp/Obrazy/
+Database Name=/run/media/ssserpent/intenso/Obrazy/
+Database Name Face=/run/media/ssserpent/intenso/Obrazy/
+Database Name Similarity=/run/media/ssserpent/intenso/Obrazy/
+Database Name Thumbnails=/run/media/ssserpent/intenso/Obrazy/
 Database Port=-1
 Database Type=QSQLITE
 Database Username=
-Database WAL Mode=false
+Database WAL Mode=true
 Internal Database Server=false
 Internal Database Server Mysql Admin Command=
 Internal Database Server Mysql Init Command=
 Internal Database Server Mysql Server Command=
+Internal Database Server Mysql Upgrade Command=
 Internal Database Server Path=
 
 [DateFolderView Sidebar]
 CurrentIndex=
-Expansion=
+Expansion=1
 Selection=
 SortColumn=0
 SortOrder=0
@@ -901,9 +232,9 @@ DigikamProperties Expanded=true
 FileProperties Expanded=true
 ItemProperties Expanded=true
 LocationProperties Expanded=true
-Minimized=true
+Minimized=false
 PhotographProperties Expanded=true
-RestoreSize=210
+RestoreSize=-1
 RightsProperties Expanded=true
 TagsProperties Expanded=true
 VideoProperties Expanded=true
@@ -943,10 +274,10 @@ GoogleMaps Map Type=ROADMAP
 GoogleMaps Show Map Type Control=true
 GoogleMaps Show Navigation Control=true
 GoogleMaps Show Scale Control=true
-Marble Map Theme=earth/srtm/srtm.dgml
+Marble Map Theme=earth/openstreetmap/openstreetmap.dgml
 Marble Projection=spherical
 Marble Show Compass=false
-Marble Show Navigation=false
+Marble Show Navigation=true
 Marble Show Overview Map=false
 Marble Show Scale Bar=false
 Marker Grouping Radius=1
@@ -977,89 +308,6 @@ XMP Level=0
 Version Properties Tab=versions
 Version Properties View Mode=2
 
-[EnabledDPlugins]
-org.kde.digikam.plugin.editor.AdjustCurvesTool=true
-org.kde.digikam.plugin.editor.AdjustLevelsTool=true
-org.kde.digikam.plugin.editor.AntiVignettingTool=true
-org.kde.digikam.plugin.editor.AutoCorrectionTool=true
-org.kde.digikam.plugin.editor.AutoCropTool=true
-org.kde.digikam.plugin.editor.BCGTool=true
-org.kde.digikam.plugin.editor.BWSepiaTool=true
-org.kde.digikam.plugin.editor.BlurFXTool=true
-org.kde.digikam.plugin.editor.BlurTool=true
-org.kde.digikam.plugin.editor.BorderTool=true
-org.kde.digikam.plugin.editor.CBTool=true
-org.kde.digikam.plugin.editor.ChannelMixerTool=true
-org.kde.digikam.plugin.editor.CharcoalTool=true
-org.kde.digikam.plugin.editor.ColorFXTool=true
-org.kde.digikam.plugin.editor.ContentAwareResizeTool=true
-org.kde.digikam.plugin.editor.Convert16To8Tool=true
-org.kde.digikam.plugin.editor.Convert8To16Tool=true
-org.kde.digikam.plugin.editor.DistortionFXTool=true
-org.kde.digikam.plugin.editor.EmbossTool=true
-org.kde.digikam.plugin.editor.FilmGrainTool=true
-org.kde.digikam.plugin.editor.FilmTool=true
-org.kde.digikam.plugin.editor.FreeRotationTool=true
-org.kde.digikam.plugin.editor.HSLTool=true
-org.kde.digikam.plugin.editor.HealingCloneTool=true
-org.kde.digikam.plugin.editor.HotPixelsTool=true
-org.kde.digikam.plugin.editor.InsertTextTool=true
-org.kde.digikam.plugin.editor.InvertTool=true
-org.kde.digikam.plugin.editor.LensAutoFixTool=true
-org.kde.digikam.plugin.editor.LensDistortionTool=true
-org.kde.digikam.plugin.editor.LocalContrastTool=true
-org.kde.digikam.plugin.editor.NoiseReductionToolPlugin=true
-org.kde.digikam.plugin.editor.OilPaintTool=true
-org.kde.digikam.plugin.editor.PerspectiveTool=true
-org.kde.digikam.plugin.editor.PrintTool=true
-org.kde.digikam.plugin.editor.ProfileConversionTool=true
-org.kde.digikam.plugin.editor.RainDropTool=true
-org.kde.digikam.plugin.editor.RatioCropTool=true
-org.kde.digikam.plugin.editor.RedEyeTool=true
-org.kde.digikam.plugin.editor.ResizeTool=true
-org.kde.digikam.plugin.editor.RestoreTool=true
-org.kde.digikam.plugin.editor.SharpenTool=true
-org.kde.digikam.plugin.editor.ShearTool=true
-org.kde.digikam.plugin.editor.TextureTool=true
-org.kde.digikam.plugin.editor.WhiteBalanceTool=true
-org.kde.digikam.plugin.generic.Box=true
-org.kde.digikam.plugin.generic.Calendar=true
-org.kde.digikam.plugin.generic.DigitalScanner=true
-org.kde.digikam.plugin.generic.DropBox=true
-org.kde.digikam.plugin.generic.ExpoBlending=true
-org.kde.digikam.plugin.generic.FileCopy=true
-org.kde.digikam.plugin.generic.FileTransfer=true
-org.kde.digikam.plugin.generic.Flickr=true
-org.kde.digikam.plugin.generic.GLViewer=true
-org.kde.digikam.plugin.generic.GeolocationEdit=true
-org.kde.digikam.plugin.generic.GoogleServices=true
-org.kde.digikam.plugin.generic.HtmlGallery=true
-org.kde.digikam.plugin.generic.ImageShack=true
-org.kde.digikam.plugin.generic.ImgUr=true
-org.kde.digikam.plugin.generic.JAlbum=true
-org.kde.digikam.plugin.generic.MediaServer=true
-org.kde.digikam.plugin.generic.MediaWiki=true
-org.kde.digikam.plugin.generic.MetadataEdit=true
-org.kde.digikam.plugin.generic.MjpegStream=true
-org.kde.digikam.plugin.generic.OneDrive=true
-org.kde.digikam.plugin.generic.Panorama=true
-org.kde.digikam.plugin.generic.Pinterest=true
-org.kde.digikam.plugin.generic.Piwigo=true
-org.kde.digikam.plugin.generic.Presentation=true
-org.kde.digikam.plugin.generic.PrintCreator=true
-org.kde.digikam.plugin.generic.SendByMail=true
-org.kde.digikam.plugin.generic.SlideShow=true
-org.kde.digikam.plugin.generic.SmugMug=true
-org.kde.digikam.plugin.generic.TextConverter=true
-org.kde.digikam.plugin.generic.TimeAdjust=true
-org.kde.digikam.plugin.generic.Twitter=true
-org.kde.digikam.plugin.generic.VideoSlideShow=true
-org.kde.digikam.plugin.generic.Wallpaper=true
-org.kde.digikam.plugin.generic.iNaturalist=true
-
-[ExifToolFormatsSearchBar Search Text Tool]
-CaseSensitive=0
-
 [ExifToolSearchBar Search Text Tool]
 CaseSensitive=0
 
@@ -1069,48 +317,32 @@ Use Yolo V3=false
 
 [Face Management Settings]
 AlbumComboBox-Checked=
-AlbumComboBox-CurrentIndex=
-AlbumComboBox-Expansion=691
+AlbumComboBox-CurrentIndex=1
+AlbumComboBox-Expansion=1
 AlbumComboBox-RestoreChecked=true
-AlbumComboBox-Selection=
+AlbumComboBox-Selection=1
 AlbumComboBox-SortColumn=0
 AlbumComboBox-SortOrder=0
 AlbumTypeEntry=0
 Already Scanned Handling=0
 Face Scan Main Task=Detect
 TagComboBox-Checked=
-TagComboBox-CurrentIndex=
+TagComboBox-CurrentIndex=4
 TagComboBox-Expansion=
 TagComboBox-RestoreChecked=true
-TagComboBox-Selection=
+TagComboBox-Selection=4
 TagComboBox-SortColumn=0
 TagComboBox-SortOrder=0
 Use Full CPU=false
 UseWholeAlbumsEntry=true
 UseWholeTagsEntry=false
 
-[FileCopy Export Dialog]
-2 screens: Height=1035
-2 screens: Width=958
-
-[FileCopyExport]
-albumPath=false
-changeImageProperties=false
-imageCompression=75
-imageFormat=0
-imageResize=1024
-overwrite=false
-removeMetadata=false
-sidecars=false
-targetBehavior=0
-targetUrl=file:///home/ssserpent/Downloads/Wrocek
-
 [Find Duplicates View]
 AlbumComboBox-Checked=
-AlbumComboBox-CurrentIndex=
+AlbumComboBox-CurrentIndex=1
 AlbumComboBox-Expansion=
 AlbumComboBox-RestoreChecked=true
-AlbumComboBox-Selection=
+AlbumComboBox-Selection=1
 AlbumComboBox-SortColumn=0
 AlbumComboBox-SortOrder=0
 AlbumTypeEntry=0
@@ -1121,10 +353,10 @@ Last search album tag relation=0
 Last search results restriction=0
 Lower bound for minimum similarity=40
 TagComboBox-Checked=
-TagComboBox-CurrentIndex=
+TagComboBox-CurrentIndex=4
 TagComboBox-Expansion=
 TagComboBox-RestoreChecked=true
-TagComboBox-Selection=
+TagComboBox-Selection=4
 TagComboBox-SortColumn=0
 TagComboBox-SortOrder=0
 UseWholeAlbumsEntry=false
@@ -1148,10 +380,10 @@ SortOrder=0
 
 [Fuzzy Search View]
 AlbumComboBox-Checked=
-AlbumComboBox-CurrentIndex=
-AlbumComboBox-Expansion=691
+AlbumComboBox-CurrentIndex=1
+AlbumComboBox-Expansion=1
 AlbumComboBox-RestoreChecked=true
-AlbumComboBox-Selection=
+AlbumComboBox-Selection=1
 AlbumComboBox-SortColumn=0
 AlbumComboBox-SortOrder=0
 UseWholeAlbumsEntry=true
@@ -1167,7 +399,7 @@ Selection=
 Sort Order=0
 SortColumn=0
 SortOrder=0
-SplitterState=AAAA/wAAAAEAAAACAAABdAAAAN0B/////wEAAAACAA==
+SplitterState=AAAA/wAAAAEAAAAC//////////8B/////wEAAAACAA==
 
 [GPS Search Sidebar][GPSSearch Map Widget]
 Backend=marble
@@ -1176,10 +408,10 @@ GoogleMaps Map Type=ROADMAP
 GoogleMaps Show Map Type Control=true
 GoogleMaps Show Navigation Control=true
 GoogleMaps Show Scale Control=true
-Marble Map Theme=earth/srtm/srtm.dgml
+Marble Map Theme=earth/openstreetmap/openstreetmap.dgml
 Marble Projection=spherical
 Marble Show Compass=false
-Marble Show Navigation=false
+Marble Show Navigation=true
 Marble Show Overview Map=false
 Marble Show Scale Bar=false
 Marker Grouping Radius=1
@@ -1196,56 +428,25 @@ Zoom=marble:900
 CaseSensitive=0
 
 [General Settings]
-1440x900 screen: Height=855
-1440x900 screen: Width=1440
-1440x900 screen: XPosition=0
-1440x900 screen: YPosition=22
-1920x1080 screen: Height=1035
-1920x1080 screen: Width=1920
-1920x1080 screen: XPosition=0
-1920x1080 screen: YPosition=22
-2 screens: Height=1035
-2 screens: Width=1920
-2 screens: XPosition=0
-2 screens: YPosition=22
-Application Font=Sans Serif,9,-1,5,50,0,0,0,0,0
+Application Font=Sans Serif,9,-1,5,400,0,0,0,0,0,0,0,0,0,0,1
 Application Style=fusion
 Apply Sidebar Changes Directly=false
 Clean core DB At Start=false
-DP-1=DP-1
-DP-2 VGA-1=DP-2
 Detect faces in newly added images=false
 Draw Frames To Grouped Items=true
 Expand New Current Item On Click=true
-Finger Prints Generator First Run=true
-FullScreen Hide SideBars=false
-FullScreen Hide StatusBar=false
-FullScreen Hide ThumbBar=true
-FullScreen Hide ToolBars=false
 Icon Theme=breeze-dark
 Scan At Start=true
 Scroll Current Item To Center=false
 Show Only Face Tags For Assigning Name=true
 Show Permanent Delete Dialog=true
 Show Splash=true
-Show Trash Delete Dialog=false
-State=AAAA/wAAAAD9AAAAAAAAB4AAAAOzAAAABAAAAAQAAAAIAAAACPwAAAABAAAAAgAAAAEAAAAWAG0AYQBpAG4AVABvAG8AbABCAGEAcgEAAAAA/////wAAAAAAAAAA
+Show Trash Delete Dialog=true
 String Comparison Type=0
 ToolBarsMovable=Disabled
-Use Large Thumbs=false
 Use Native File Dialog=false
 Use Trash=true
-VGA-1=VGA-1
-Version=8.0.0
-
-[Google Photo Settings]
-Current Album=
-Image Quality=90
-Maximum Width=1600
-Resize=false
-Tag Paths=0
-Upload Original=false
-Write PhotoID=true
+Version=8.3.0
 
 [Grouping Behaviour]
 Do BQM operations on all=2
@@ -1256,104 +457,14 @@ Do slideshow operations on all=2
 Operate tools on all=2
 Rename all=2
 
-[Image Properties SideBar]
-EXIF Tags Filter=
-
-[Image Quality Settings]
-Accepted Threshold=60
-Blur Weight=100
-Compression Weight=100
-Detect Aesthetic=true
-Detect Blur=true
-Detect Compression=true
-Detect Exposure=true
-Detect Noise=true
-Exposure Weight=100
-HighQ Accepted=true
-LowQ Rejected=true
-MediumQ Pending=true
-Noise Weight=100
-Pending Threshold=40
-Rejected Threshold=10
-
 [ImageViewer Settings]
-1440x900 screen: XPosition=0
-1440x900 screen: YPosition=0
-1920x1080 screen: Height=1035
-1920x1080 screen: Width=958
-1920x1080 screen: XPosition=962
-1920x1080 screen: YPosition=22
-2 screens: XPosition=0
-2 screens: YPosition=0
-AVIFCompression=100
-AVIFLossLess=true
-AutoBrightness=true
 AutoZoom=true
-BackgroundColor=0,0,0
-Black Point=0
-Brightness Multiplier=1
-Custom White Balance=6500
-Custom White Balance Green=1
-DP-1=DP-1
-DP-2 VGA-1=DP-2
-Dcb Enhance Filter=false
-Dcb Iterations=-1
-Decoding Quality=0
-Dont Stretch Pixels=false
-Expo Correction=false
-Expo Correction Highlight=0
-Expo Correction Shift=0.9939999999999998
-ExpoIndicatorMode=true
-FixColorsHighlights=false
-Four Color RGB=false
-FullScreen Hide SideBars=false
-FullScreen Hide StatusBar=false
-FullScreen Hide ThumbBar=true
-FullScreen Hide ToolBars=false
-HEIFCompression=75
-HEIFLossLess=true
-JPEG2000Compression=75
-JPEG2000LossLess=true
-JPEGCompression=75
-JPEGSubSampling=1
-JXLCompression=100
-JXLLossLess=true
-Median Filter Passes=0
-Noise Reduction Threshold=0
-Noise Reduction Type=0
-Output Color Space=1
-OverExposureColor=0,0,0
 OverExposureIndicator=false
-OverExposurePercentsEntry=1
-PGFCompression=3
-PGFLossLess=true
-PNGCompression=9
 PreviewMode=128
-RawImportToolIid=org.kde.digikam.plugin.rawimport.Native
-RestoreToolSettings=true
 Show Thumbbar=false
-ShowImageSettingsDialog=true
-SixteenBitsImage=true
-SplitterState=AAAA/wAAAAEAAAACAAAAkAAAATsB/////wAAAAABAQ==
-State=AAAA/wAAAAD9AAAAAAAAA74AAAOzAAAABAAAAAQAAAAIAAAACPwAAAABAAAAAgAAAAEAAAAWAG0AYQBpAG4AVABvAG8AbABCAGEAcgEAAAAA/////wAAAAAAAAAA
-TIFFCompression=false
-ToolBarsMovable=Disabled
-Unclip Color=0
-UnderExposureColor=255,255,255
+SplitterState=AAAA/wAAAAEAAAAC//////////8B/////wAAAAABAQ==
 UnderExposureIndicator=false
-UnderExposurePercentsEntry=1
-Use Black Point=false
-Use White Point=false
-UseRawImportTool=true
-UseThemeBackgroundColor=true
-VGA-1=VGA-1
-WEBPCompression=100
-WEBPLossLess=true
-White Balance=1
-White Point=0
-corrections Expanded=false
-demosaicing Expanded=true
-whitebalance Expanded=true
+UseRawImportTool=false
 
 [ImageViewer Settings][Right Sidebar]
 ActiveTab=0
@@ -1403,10 +514,10 @@ GoogleMaps Map Type=ROADMAP
 GoogleMaps Show Map Type Control=true
 GoogleMaps Show Navigation Control=true
 GoogleMaps Show Scale Control=true
-Marble Map Theme=earth/srtm/srtm.dgml
+Marble Map Theme=earth/openstreetmap/openstreetmap.dgml
 Marble Projection=spherical
 Marble Show Compass=false
-Marble Show Navigation=false
+Marble Show Navigation=true
 Marble Show Overview Map=false
 Marble Show Scale Bar=false
 Marker Grouping Radius=1
@@ -1437,18 +548,12 @@ XMP Level=0
 Version Properties Tab=versions
 Version Properties View Mode=2
 
-[ImageViewer Thumbbar]
-State=AAAA/wAAAAD9AAAAAQAAAAAAAAEAAAABiPwCAAAAAfsAAAAeAGUAZABpAHQAbwByAF8AdABoAHUAbQBiAGIAYQByAAAAAAAAAAGIAAAAlQAAATEAAAJpAAABiAAAAAQAAAAEAAAACAAAAAj8AAAAAA==
-ToolBarsMovable=Disabled
-
 [Import Filters]
-Filter0=All Files|false|||
-Filter1=Only New Files|true|||
-Filter2=Raw Files|false|||image/x-nikon-nef;image/x-fuji-raf;image/x-adobe-dng;image/x-panasonic-raw;image/x-olympus-orf;image/x-kodak-dcr;image/x-kodak-k25;image/x-sony-arw;image/x-minolta-mrw;image/x-kodak-kdc;image/x-sigma-x3f;image/x-sony-srf;image/x-pentax-pef;image/x-panasonic-raw2;image/x-canon-crw;image/x-sony-sr2;image/x-canon-cr2
-Filter3=JPG/TIFF Files|false|||image/jpeg;image/tiff
-Filter4=Video Files|false|||video/quicktime;video/mp4;video/x-msvideo;video/mpeg
-IgnoreExtensions=dsp dps
-IgnoreNames=mgr_data pgr_mgr
+CurrentFilter=0
+
+[Import MainWindow]
+SplitterState=AAAA/wAAAAEAAAABAAABaQH/////AAAAAAEB
+ThumbbarState=AAAA/wAAAAD9AAAAAQAAAAIAAAAAAAAAAPwBAAAAAfsAAAAeAGkAbQBwAG8AcgB0AF8AdABoAHUAbQBiAGIAYQByAAAAAAD/////AAAAVwD///8AAAOmAAADtQAAAAQAAAAEAAAACAAAAAj8AAAAAA==
 
 [Import Settings]
 Default Icon Size=142
@@ -1461,7 +566,7 @@ Icon Show Rating=true
 Icon Show Size=false
 Icon Show Tags=true
 Icon Show Title=true
-IconView Font=Sans Serif,9,-1,5,50,0,0,0,0,0
+IconView Font=Sans Serif,9,-1,5,400,0,0,0,0,0,0,0,0,0,0,1
 Image Separation Mode=1
 Image Sort Order=0
 Image Sorting=0
@@ -1471,7 +576,7 @@ Preview Load Full Image Size=false
 Preview Show Icons=true
 Show Thumbbar=true
 Show ToolTips=false
-ToolTips Font=Sans Serif,9,-1,5,50,0,0,0,0,0
+ToolTips Font=Sans Serif,9,-1,5,400,0,0,0,0,0,0,0,0,0,0,1
 ToolTips Show File Date=false
 ToolTips Show File Name=true
 ToolTips Show File Size=false
@@ -1530,24 +635,10 @@ PickSelection=
 RatingSelection=
 
 [LightTable Settings]
-1440x900 screen: XPosition=0
-1440x900 screen: YPosition=0
-1920x1080 screen: XPosition=0
-1920x1080 screen: YPosition=0
-2 screens: XPosition=0
-2 screens: YPosition=0
-Auto Load Right Panel=true
-Auto Sync Preview=true
 Clear On Close=false
-DP-1=DP-1
-DP-2 VGA-1=DP-2
-FullScreen Hide SideBars=false
-FullScreen Hide StatusBar=false
-FullScreen Hide ToolBars=false
-Horizontal Splitter State=AAAA/wAAAAEAAAADAAABOwAAAFcAAAE7Af////8AAAAAAQE=
+Horizontal Splitter State=AAAA/wAAAAEAAAAD////////////////Af////8AAAAAAQE=
 Navigate By Pair=false
 Show Thumbbar=true
-VGA-1=VGA-1
 
 [LightTable Settings][Left Sidebar]
 ActiveTab=0
@@ -1557,7 +648,7 @@ ItemProperties Expanded=true
 LocationProperties Expanded=true
 Minimized=true
 PhotographProperties Expanded=true
-RestoreSize=31
+RestoreSize=-1
 RightsProperties Expanded=true
 TagsProperties Expanded=true
 VideoProperties Expanded=true
@@ -1597,10 +688,10 @@ GoogleMaps Map Type=ROADMAP
 GoogleMaps Show Map Type Control=true
 GoogleMaps Show Navigation Control=true
 GoogleMaps Show Scale Control=true
-Marble Map Theme=earth/srtm/srtm.dgml
+Marble Map Theme=earth/openstreetmap/openstreetmap.dgml
 Marble Projection=spherical
 Marble Show Compass=false
-Marble Show Navigation=false
+Marble Show Navigation=true
 Marble Show Overview Map=false
 Marble Show Scale Bar=false
 Marker Grouping Radius=1
@@ -1639,7 +730,7 @@ ItemProperties Expanded=true
 LocationProperties Expanded=true
 Minimized=true
 PhotographProperties Expanded=true
-RestoreSize=30
+RestoreSize=-1
 RightsProperties Expanded=true
 TagsProperties Expanded=true
 VideoProperties Expanded=true
@@ -1679,10 +770,10 @@ GoogleMaps Map Type=ROADMAP
 GoogleMaps Show Map Type Control=true
 GoogleMaps Show Navigation Control=true
 GoogleMaps Show Scale Control=true
-Marble Map Theme=earth/srtm/srtm.dgml
+Marble Map Theme=earth/openstreetmap/openstreetmap.dgml
 Marble Projection=spherical
 Marble Show Compass=false
-Marble Show Navigation=false
+Marble Show Navigation=true
 Marble Show Overview Map=false
 Marble Show Scale Bar=false
 Marker Grouping Radius=1
@@ -1714,75 +805,9 @@ Version Properties Tab=versions
 Version Properties View Mode=2
 
 [MainWindow]
-InitialAlbumID=1284
-SplitterState=AAAA/wAAAAEAAAADAAABVQAABA8AAAE7Af////8AAAAAAQE=
-ThumbbarState=AAAA/wAAAAD9AAAAAQAAAAIAAAXzAAAAwPwBAAAAAfsAAAAmAG0AYQBpAG4AdwBpAG4AZABvAHcAXwB0AGgAdQBtAGIAYgBhAHIAAAAAAAAABfMAAABXAP///wAABfMAAAOzAAAABAAAAAQAAAAIAAAACPwAAAAA
-
-[MediaPlayer AVFilterAudio]
-enable=true
-options=
-
-[MediaPlayer AVFilterVideo]
-enable=true
-options=
-
-[MediaPlayer AVFormat]
-analyzeduration=5000000
-avioflags=0
-enable=false
-extra=
-probesize=5000000
-
-[MediaPlayer Ass]
-font_file=
-fonts_dir=
-force_font_file=false
-
-[MediaPlayer Buffer]
-value=-1
-
-[MediaPlayer Capture]
-dir=/home/ssserpent/Pictures
-format=png
-quality=100
-
-[MediaPlayer Decoder Video]
-priority=FFmpeg
-zeroCopy=true
-
-[MediaPlayer General]
-abort_timeout=true
-force_fps=0
-last_file=
-timeout=30
-
-[MediaPlayer OpenGL]
-angle_platform=d3d9
-egl=false
-type=OpenGLES
-
-[MediaPlayer Preview]
-enabled=true
-height=90
-width=160
-
-[MediaPlayer Shader]
-enable=false
-fbo=false
-fragHeader=
-fragPostProcess=//negate color effect\ngl_FragColor.rgb = vec3(1.0-gl_FragColor.r, 1.0-gl_FragColor.g, 1.0-gl_FragColor.b);
-fragSample=// horizontal mirror effect\nvec4 sample2d(sampler2D tex, vec2 pos, int p) {\n    return texture(tex, vec2(1.0-pos.x, pos.y));\n}
-
-[MediaPlayer Subtitle]
-autoLoad=true
-bottom margin=8
-color=255,255,255
-delay=0
-enabled=true
-engines=FFmpeg,LibASS
-font=Sans Serif,20,-1,5,75,0,0,0,0,0
-outline=true
-outline_color=0,0,255
+InitialAlbumID=795
+SplitterState=AAAA/wAAAAEAAAADAAABkwAADhoAAAE9Af////8AAAAAAQE=
+ThumbbarState=AAAA/wAAAAD9AAAAAQAAAAIAAAR0AAAAtfwBAAAAAfsAAAAmAG0AYQBpAG4AdwBpAG4AZABvAHcAXwB0AGgAdQBtAGIAYgBhAHIAAAAAAAAABHQAAABXAP///wAABHQAAAL7AAAABAAAAAQAAAAIAAAACPwAAAAA
 
 [Metadata Settings]
 Album Date Source=1
@@ -1814,9 +839,6 @@ Write Metadata To DNG Files=false
 Write Metadata To Files With ExifTool=false
 Write Metadata To RAW Files=false
 
-[MetadataSelectorView Search Text Tool]
-CaseSensitive=0
-
 [People Sidebar]
 CurrentIndex=
 Expansion=
@@ -1825,14 +847,11 @@ Selection=
 SortColumn=0
 SortOrder=0
 
-[PluginsSearchBar Search Text Tool]
-CaseSensitive=0
-
 [Search Sidebar]
-CurrentIndex=1
+CurrentIndex=
 Expansion=
 RestoreChecked=false
-Selection=1
+Selection=
 SortColumn=0
 SortOrder=0
 
@@ -1841,44 +860,23 @@ CaseSensitive=0
 
 [Select Reference]
 AlbumComboBox-Checked=
-AlbumComboBox-CurrentIndex=
+AlbumComboBox-CurrentIndex=1
 AlbumComboBox-Expansion=
 AlbumComboBox-RestoreChecked=true
-AlbumComboBox-Selection=
+AlbumComboBox-Selection=1
 AlbumComboBox-SortColumn=0
 AlbumComboBox-SortOrder=0
 UseWholeAlbumsEntry=false
 
-[Setup Dialog]
-Albumview Tab=0
-Camera Tab=0
-Editor Tab=0
-ICC Tab=0
-Metadata SubTab=0
-Metadata Tab=0
-Misc Tab=0
-Plugin Tab=0
-Setup Page=9
-Template Tab=0
-ToolTip Tab=0
-Video Tab=0
-
 [Sketch Search View]
 AlbumComboBox-Checked=
-AlbumComboBox-CurrentIndex=
-AlbumComboBox-Expansion=691
+AlbumComboBox-CurrentIndex=1
+AlbumComboBox-Expansion=1
 AlbumComboBox-RestoreChecked=true
-AlbumComboBox-Selection=
+AlbumComboBox-Selection=1
 AlbumComboBox-SortColumn=0
 AlbumComboBox-SortOrder=0
 UseWholeAlbumsEntry=true
-
-[Spell Check Settings]
-AlternativeLang=x-default,de-DE,en-US,es-ES,fr-FR,it-IT,pt-PT
-EnableSpellCheck=false
-IgnoredWords=digiKam,Showfoto,Apple,Nikon,Android,Canon,Sony,Samsung,Panasonic,Olympus,Exif,IPTC,Xmp
-TranslatorEngine=0
-TranslatorLang=de-DE,en-US,es-ES,fr-FR,it-IT,pt-PT
 
 [TagFilter Sidebar]
 FaceTagsFilter Expanded=true
@@ -1903,7 +901,7 @@ TagsSource=false
 
 [TimeLine Sidebar]
 CurrentIndex=
-Cursor Position=2023,6,1,0,0,0
+Cursor Position=2024,6,1,0,0,0
 Expansion=
 Histogram Scale=0
 Histogram TimeUnit=2
@@ -1913,9 +911,6 @@ SortColumn=0
 SortOrder=0
 
 [TimeLineViewSearchDateBar Search Text Tool]
-CaseSensitive=0
-
-[TranslatorLangSearchBar Search Text Tool]
 CaseSensitive=0
 
 [Versioning Settings]
@@ -1928,9 +923,31 @@ Saving Format for Versions=JPG
 Show Intermediates in View=true
 Show Original in View=true
 
-[googlephotoexportExport Dialog]
-1440x900 screen: Height=855
-1440x900 screen: Width=718
+[import_mapwidgetview]
+Sort Order=0
+
+[import_mapwidgetview][Central Map Widget]
+Backend=marble
+Center=geo:52,6
+GoogleMaps Map Type=ROADMAP
+GoogleMaps Show Map Type Control=true
+GoogleMaps Show Navigation Control=true
+GoogleMaps Show Scale Control=true
+Marble Map Theme=earth/openstreetmap/openstreetmap.dgml
+Marble Projection=spherical
+Marble Show Compass=false
+Marble Show Navigation=true
+Marble Show Overview Map=false
+Marble Show Scale Bar=false
+Marker Grouping Radius=1
+Mouse Mode=0
+Preview Grouped Items=true
+Preview Single Items=true
+Show Thumbnails=true
+Show numbers on items=true
+Thumbnail Grouping Radius=30
+Thumbnail Size=60
+Zoom=marble:900
 
 [mainwindow_mapwidgetview]
 Sort Order=0
@@ -1942,10 +959,10 @@ GoogleMaps Map Type=ROADMAP
 GoogleMaps Show Map Type Control=true
 GoogleMaps Show Navigation Control=true
 GoogleMaps Show Scale Control=true
-Marble Map Theme=earth/srtm/srtm.dgml
+Marble Map Theme=earth/openstreetmap/openstreetmap.dgml
 Marble Projection=spherical
 Marble Show Compass=false
-Marble Show Navigation=false
+Marble Show Navigation=true
 Marble Show Overview Map=false
 Marble Show Scale Bar=false
 Marker Grouping Radius=1
@@ -1963,7 +980,7 @@ Grouping mode=2
 
 [mainwindow_tableview][Current Profile]
 Column Count=6
-Header State=\x00\x00\x00\xff\x00\x00\x00\x00\x00\x00\x00\x01\x00\x00\x00\x01\x00\x00\x00\x06\x01\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x02X\x00\x00\x00\x06\x01\x01\x00\x01\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00d\xff\xff\xff\xff\x00\x00\x00\x81\x00\x00\x00\x00\x00\x00\x00\x06\x00\x00\x00d\x00\x00\x00\x01\x00\x00\x00\x00\x00\x00\x00d\x00\x00\x00\x01\x00\x00\x00\x00\x00\x00\x00d\x00\x00\x00\x01\x00\x00\x00\x00\x00\x00\x00d\x00\x00\x00\x01\x00\x00\x00\x00\x00\x00\x00d\x00\x00\x00\x01\x00\x00\x00\x00\x00\x00\x00d\x00\x00\x00\x01\x00\x00\x00\x00\x00\x00\x03\xe8\x00\x00\x00\x00d
+Header State=AAAA/wAAAAAAAAABAAAAAQAAAAYBAAAAAAAAAAAAAAAAAAAAAAAAAlgAAAAGAQEAAQAAAAAAAAAAAAAAAGT/////AAAAgQAAAAAAAAAGAAAAZAAAAAEAAAAAAAAAZAAAAAEAAAAAAAAAZAAAAAEAAAAAAAAAZAAAAAEAAAAAAAAAZAAAAAEAAAAAAAAAZAAAAAEAAAAAAAAD6AAAAABkAAAAAA==
 Profile Name=
 
 [mainwindow_tableview][Current Profile][Column 0]
