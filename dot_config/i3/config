@@ -195,7 +195,7 @@ workspace_auto_back_and_forth yes
 #-- Launcher mode {{{
 # Press $mod+o followed by either b, f, m, Escape or Return to launch Brave
 # Firefox or Min browsers or return to the default mode, respectively
-set $mode_launcher Launch: [b]rave [f]irefox [m]in
+set $mode_launcher Launch: [b]rave [f]irefox
 bindsym $mod+o mode "$mode_launcher"
 mode "$mode_launcher" {
     bindsym b exec brave
@@ -206,13 +206,7 @@ mode "$mode_launcher" {
 }
 assign [class="firefox" instance="Navigator"] $ws2
 assign [class="Brave-browser" instance="brave-browser"] $ws2
-<<<<<<< HEAD
-||||||| 0b6fa5d
-assign [class="Min" instance="min"] $ws9
-=======
-assign [class="Min" instance="min"] $ws9
 assign [class="calibre" instance="calibre-gui"] $ws3
->>>>>>> 8882c93fc571d2abf8a29cccb5617957df640170
 #}}}
 #-- set $i3lockwall i3lock -i ~/Downloads/wallpaper.png {{{
 set $i3lockwall sh ~/.config/i3/scripts/lock.sh
