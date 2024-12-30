@@ -115,8 +115,8 @@ fi
 # {{{
 # ftmuxp                                # enable if you want to start tmux
 
-bindkey -r '^l'                         # Clearing the shell is now done with CTRL+r
-bindkey -r '^g'
+# bindkey -r '^l'                         # Clearing the shell is now done with CTRL+r
+# bindkey -r '^g'
 bindkey -s '^r' 'clear\n'
 # }}}
 # +--------+
