@@ -350,6 +350,5 @@ bindsym $mod+control+shift+Print exec /home/ssserpent/.config/zsh/external/scree
 # }}}
 #-- launch apps on startup {{{
 exec --no-startup-id brave
-exec --no-startup-id calibre
 exec --no-startup-id kitty --session $XDG_CONFIG_HOME/kitty/session
 #}}}
