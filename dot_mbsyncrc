@@ -2,9 +2,9 @@ IMAPStore ssserpent@gmail.com-remote
 Host imap.gmail.com
 Port 993
 User ssserpent@gmail.com
-PassCmd "pass ssserpent@gmail.com"
+PassCmd "pass ADM/ssserpent@gmail.com"
 AuthMechs LOGIN
-SSLType IMAPS
+TLSType IMAPS
 CertificateFile /etc/ssl/certs/ca-certificates.crt
 
 MaildirStore ssserpent@gmail.com-local
@@ -27,9 +27,9 @@ IMAPStore kloza.marek@gmail.com-remote
 Host imap.gmail.com
 Port 993
 User kloza.marek@gmail.com
-PassCmd "pass kloza.marek@gmail.com"
+PassCmd "pass ADM/kloza.marek@gmail.com"
 AuthMechs LOGIN
-SSLType IMAPS
+TLSType IMAPS
 CertificateFile /etc/ssl/certs/ca-certificates.crt
 
 MaildirStore kloza.marek@gmail.com-local
