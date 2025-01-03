@@ -64,18 +64,18 @@
 ## Control + mouse button 2 release event starts rxvt
 #"rxvt"
 #  Control + b:2 + Release
-# "/usr/bin/xvkbd -text "\C+""
-#   m:0x0 + b:13
-# "/usr/bin/xvkbd -text "\C_""
-#   m:0x0 + b:15
-# "/usr/bin/xvkbd -text "\C0""
-#   m:0x0 + b:17
-# "/usr/bin/xvkbd -text "\C\[Prior]""
-#   m:0x0 + b:6
-# "/usr/bin/xvkbd -text "\C\[Next]""
-#   m:0x0 + b:7
-#"/usr/bin/xvkbd -text "\[Control_L]\[Page_Down]""
-#  m:0x0 + b:7
+ "/usr/bin/xvkbd -text "\C+""
+   m:0x0 + b:13
+ "/usr/bin/xvkbd -text "\C_""
+   m:0x0 + b:15
+ "/usr/bin/xvkbd -text "\C0""
+   m:0x0 + b:17
+ "/usr/bin/xvkbd -text "\C\[Prior]""
+   m:0x0 + b:6
+ "/usr/bin/xvkbd -text "\C\[Next]""
+   m:0x0 + b:7
+"/usr/bin/xvkbd -text "\[Control_L]\[Page_Down]""
+  m:0x0 + b:7
 ###################################
 # End of xbindkeys configuration #
 ##################################
