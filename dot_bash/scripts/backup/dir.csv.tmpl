@@ -1,4 +1,12 @@
 {{- if eq .chezmoi.hostname "samsung" }}
+exclude:.cache
+exclude:.config/BraveSoftware
+exclude:.config/local/share/mail
+exclude:.cpanm
+exclude:.mozilla
+exclude:.npm
+exclude:.pki
+exclude:.rustup
 /home/ssserpent,antix:/mnt/raid/home_dir_samsung_bckp
 {{- end}}
 {{- if eq .chezmoi.hostname "texus" }}

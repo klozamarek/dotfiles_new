@@ -190,6 +190,19 @@ updatesys() {
     sh $HOME/update.sh
 }
 #}}}
+# -- sgpt shell integration() seamless command AI creation --{{{
+_sgpt_zsh() {
+if [[ -n "$BUFFER" ]]; then
+    _sgpt_prev_cmd=$BUFFER
+    BUFFER+="⌛"
+    zle -I && zle redisplay
+    BUFFER=$(sgpt --shell <<< "$_sgpt_prev_cmd" --no-interaction)
+    zle end-of-line
+fi
+}
+zle -N _sgpt_zsh
+bindkey "^l" _sgpt_zsh
+#}}}
 # -- historystat() history statistics --{{{
 historystat() {
     history 0 | awk '{ if ($2 == "sudo") {print $3} else {print $2} }' | awk -v "FS=|" '{print $1}' | sort | uniq -c | sort -r -n | head -15
@@ -500,6 +513,8 @@ cfg-w3m() {chezmoi edit /home/ssserpent/.w3m/config ;}
 cfg-w3mkeymap() {chezmoi edit /home/ssserpent/.w3m/keymap ;}
 cfg-w3mmailcap() {chezmoi edit /home/ssserpent/.w3m/mailcap ;}
 cfg-w3murimethodmap() {chezmoi edit /home/ssserpent/.w3m/urimethodmap ;}
+cfg-dir() {chezmoi edit /home/ssserpent/.bash/scripts/backup/dir.csv ;}
+cfg-backup() {chezmoi edit /home/ssserpent/.bash/scripts/backup/backup.sh ;}
 # cfg-() {chezmoi edit ;}
 #}}}
 # -- rld-...() configurations reload --{{{
@@ -577,17 +592,4 @@ tsm-show() { transmission-show "$1" ;}                          # show .torrent 
 # LINK: https://github.com/fagga/transmission-remote-cli
 # DESC: ncurses frontend to transmission-daemon
 tsm-ncurse() { transmission-remote-cli ;}
-#}}}
-# -- Shell-GPT integration ZSH v0.2 --{{{
-_sgpt_zsh() {
-if [[ -n "$BUFFER" ]]; then
-    _sgpt_prev_cmd=$BUFFER
-    BUFFER+="⌛"
-    zle -I && zle redisplay
-    BUFFER=$(sgpt --shell <<< "$_sgpt_prev_cmd" --no-interaction)
-    zle end-of-line
-fi
-}
-zle -N _sgpt_zsh
-bindkey "^l" _sgpt_zsh
 #}}}

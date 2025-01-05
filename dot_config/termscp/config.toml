@@ -11,4 +11,5 @@ notification_threshold = 536870912
 ssh_config = "/home/ssserpent/.ssh/config"
 
 [remote.ssh_keys]
+"ssserpent@texus" = "/home/ssserpent/.config/termscp/.ssh/ssserpent@texus.key"
 "ssserpent@antix" = "/home/ssserpent/.config/termscp/.ssh/ssserpent@antix.key"
